@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>美化checkbox</title>
+    <!-- 借用label隐藏checkbox，使用自定义checkbox，根据状态修改背景图 -->
+    <style>
+      input[type='checkbox'] {
+        display: none;
+      }
+      input[type='checkbox']:checked + div {
+        background-image: url(./checkbox2.png);
+      }
+      div {
+        background-image: url(./checkbox1.png);
+        background-size: 28px 28px;
+        width: 28px;
+        height: 28px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 隐藏checkbox，label内的其他内容点击可以实现 -->
+    <label>
+      <input type="checkbox" />
+      <div></div>
+      选择
+    </label>
+  </body>
+</html>

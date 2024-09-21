@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <iframe
+      src="http://localhost:5000/2.html"
+      frameborder="0"
+      id="frame"
+      onload="load()"
+    ></iframe>
+
+    <script>
+      function load() {
+        let frame = document.getElementById('frame');
+        // 拿到frame里面内部的元素
+        frame.contentWindow.postMessage(
+          '我是页面1，我要页面2说话，你应该是页面2',
+          'http://localhost:5000'
+        );
+
+        window.onmessage = e => {
+          console.log(e.data);
+        };
+      }
+    </script>
+  </body>
+</html>

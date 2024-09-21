@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+  <title></title>
+</head>
+
+<body>
+  <ul>
+    <li>一<button>删除一</button></li>
+    <li>二<button>删除二</button></li>
+    <li>三<button>删除三</button></li>
+    <li>四<button>删除四</button></li>
+    <li>五<button>删除五</button></li>
+    <li>六<button>删除六</button></li>
+  </ul>
+  <script>
+    const eul = document.querySelector('ul')
+
+    eul.addEventListener('click', function (event) {
+      event = event || window.event
+      // IE浏览器支持window.event.srcElement，而firefox支持window.event.target
+      const target = event.target || event.srcElement
+
+      if (target.tagName.toLowerCase() === 'button') {
+        // ul 中删除li
+        target.parentNode.parentNode.removeChild(target.parentNode)
+      }
+    })
+  </script>
+</body>
+
+</html>

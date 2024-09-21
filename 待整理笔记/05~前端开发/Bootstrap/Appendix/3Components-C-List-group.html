@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="mx-auto w-50">
+        <h3 class="text-center">ul list group</h3>
+        <ul class="list-group" id="change1">
+            <li class="list-group-item" id="change2">list item</li>
+            <li class="list-group-item active">list item</li>
+            <li class="list-group-item disabled">list item</li>
+        </ul>
+        <!-- ul list group end -->
+
+        <button class="btn btn-outline-primary mt-3" id="button1" value="list-group-flush">use list-group-flush</button>
+        <button class="btn btn-outline-primary mt-3" id="button2">recovery</button>
+        <!-- button end -->
+        <select name="select1" id="select1" class="form-control mt-3">
+            <option value="">none</option>
+            <option value="list-group-item-primary">.list-group-item-primary</option>
+            <option value="list-group-item-secondary">.list-group-item-secondary</option>
+            <option value="list-group-item-info">.list-group-item-info</option>
+            <option value="list-group-item-success">.list-group-item-success</option>
+            <option value="list-group-item-warning">.list-group-item-warning</option>
+            <option value="list-group-item-danger">.list-group-item-danger</option>
+            <option value="list-group-item-light">.list-group-item-light</option>
+            <option value="list-group-item-dark">.list-group-item-dark</option>
+        </select>
+
+        <h3 class="text-center mt-3">achor list group</h3>
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action">list item</a>
+            <a href="#" class="list-group-item list-group-item-action active">list item</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">list item</a>
+        </div>
+        <!-- archor list group end -->
+
+        <h3 class="text-center mt-3">button list group</h3>
+        <div class="list-group">
+            <button class="list-group-item list-group-item-action">list item</button>
+            <button class="list-group-item list-group-item-action active">list item</button>
+            <button class="list-group-item list-group-item-action disabled">list item</button>
+        </div>
+        <!-- button list group end -->
+
+        <h3 class="text-center mt-3">list group with badge</h3>
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">list item<span class="badge badge-danger badge-pill">1</span></li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">list item<span class="badge badge-danger badge-pill">2</span></li>
+        </ul>
+        <!-- list group with badge end -->
+
+        <h3 class="text-center mt-3">list group with content</h3>
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active">
+                <div class="d-flex justify-content-between">
+                    <h5>heading</h5>
+                    <small>3 days ago</small>
+                </div>
+                <p>hello, my name is liuyaohui</p>
+                <small>keep the message</small>
+            </a>
+
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex justify-content-between">
+                    <h5>heading</h5>
+                    <small>3 days ago</small>
+                </div>
+                <p>hello, my name is liuyaohui</p>
+                <small>keep the message</small>
+            </a>
+        </div>
+        <!-- list group with content end -->
+    </div>
+    <!-- end -->
+
+
+
+
+    <!-- tab content start -->
+    <div class="mx-auto w-75">
+        <h3 class="text-center mt-3">tab content</h3>
+        <div class="row">
+            <div class="col-4">
+                <div class="list-group">
+                    <a href="#github" class="list-group-item list-group-item-action" data-toggle="list">Github</a>
+                    <a href="#microsoft" class="list-group-item list-group-item-action" data-toggle="list">Microsoft</a>
+                    <a href="#apple" class="list-group-item list-group-item-action" data-toggle="list">IBM</a>
+                </div>
+            </div>
+            <!-- list group end -->
+            <div class="col-8">
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="github">
+                        <p>
+                            GitHub brings together the world's largest community of developers to discover, 
+                            share, and build better software.
+                            GitHub brings together the world's largest community of developers to discover, 
+                            share, and build better software.
+                            GitHub brings together the world's largest community of developers to discover, 
+                            share, and build better software.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="microsoft">
+                        <p>
+                            At Microsoft our mission and values are to help people and businesses throughout the world 
+                            realize their full potential.
+                            At Microsoft our mission and values are to help people and businesses throughout the world 
+                            realize their full potential.
+                            At Microsoft our mission and values are to help people and businesses throughout the world 
+                            realize their full potential.
+                            At Microsoft our mission and values are to help people and businesses throughout the world 
+                            realize their full potential.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="apple">
+                        <p>
+                            For more than a century IBM has been dedicated to every client's success 
+                            and to creating innovations that matter for the world.
+                            For more than a century IBM has been dedicated to every client's success 
+                            and to creating innovations that matter for the world.
+                            For more than a century IBM has been dedicated to every client's success 
+                            and to creating innovations that matter for the world.
+                            For more than a century IBM has been dedicated to every client's success 
+                            and to creating innovations that matter for the world.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- tab content end -->
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script>
+        $('#button1').click(
+            function(){
+                $('#change1').removeClass();
+                $('#change1').addClass('list-group ' + $(this).val());
+            }
+        )
+
+        $('#button2').click(
+            function(){
+                $('#change1').removeClass();
+                $('#change1').addClass('list-group');
+            }
+        )
+
+        $('#select1').change(
+            function(){
+                $('#change2').removeClass();
+                $('#change2').addClass('list-group-item '+ $(this).val());
+            }
+        )
+    </script>
+</body>
+</html>

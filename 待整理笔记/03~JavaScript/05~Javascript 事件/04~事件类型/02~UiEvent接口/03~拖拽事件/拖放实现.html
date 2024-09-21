@@ -1,0 +1,52 @@
+<head>
+  <style>
+    #draggable {
+      width: 200px;
+      height: 20px;
+      text-align: center;
+      background: white;
+    }
+
+    .dropzone {
+      width: 200px;
+      height: 20px;
+      background: blueviolet;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dropzone">
+    <div id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
+      This div is draggable
+    </div>
+  </div>
+  <div class="dropzone"></div>
+  <div class="dropzone"></div>
+  <div class="dropzone"></div>
+  <script>
+    window.onload = function () {
+      var dragged
+
+      document.addEventListener("dragstart", function (event) {
+        dragged = event.target
+      }, false)
+
+      document.addEventListener("dragover", function (event) {
+        // prevent default to allow drop
+        event.preventDefault()
+      }, false)
+
+      document.addEventListener("drop", function (event) {
+        // prevent default action (open as link for some elements)
+        event.preventDefault()
+        if (event.target.className == "dropzone") {
+          dragged.parentNode.removeChild(dragged)
+          event.target.appendChild(dragged)
+        }
+      }, false)
+    }
+  </script>
+</body>

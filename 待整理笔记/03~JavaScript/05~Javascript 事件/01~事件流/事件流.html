@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="box1">box1
+    <div id="box2">box2
+      <div id="box3">box3</div>
+    </div>
+  </div>
+</body>
+<script>
+  var box1 = document.getElementById("box1");
+  var box2 = document.getElementById("box2");
+  var box3 = document.getElementById("box3");
+  box1.addEventListener("click", function () {
+    console.log("捕获box1")
+  }, true)
+  box2.addEventListener("click", function () {
+    console.log("捕获box2")
+  }, true)
+  box3.addEventListener("click", function () {
+    console.log("冒泡box3")
+  }, false)
+  box3.addEventListener("click", function () {
+    console.log("捕获box3")
+  }, true)
+
+  box1.addEventListener("click", function () {
+    console.log("冒泡box1")
+  }, false)
+
+  box2.addEventListener("click", function () {
+    console.log("冒泡box2")
+  }, false)
+
+</script>
+
+</html>

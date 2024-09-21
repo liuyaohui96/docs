@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>InputEvent.dataTransfer的使用</title>
+  </head>
+  <body>
+    <p>
+      <span style="font-weight: bold; color: blue">Whoa, bold blue text!</span>
+    </p>
+    <p>
+      <span style="font-weight: italic; color: red"
+        >Exciting: italic red text!</span
+      >
+    </p>
+    <p>Boring normal text ;-(</p>
+
+    <hr />
+
+    <p contenteditable="true">
+      Go on, try pasting some content into this editable paragraph and see what
+      happens!
+    </p>
+
+    <p class="result"></p>
+    <script>
+      var editable = document.querySelector('p[contenteditable]');
+      var result = document.querySelector('.result');
+      var dataTransferObj;
+
+      editable.addEventListener('input', e => {
+        result.textContent = e.dataTransfer.getData('text/html');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .paral {
+      display: inline-block;
+      padding: 6px 12px;
+      background-color: #0077ff;
+      transform: skew(45deg);
+      color: #fff;
+    }
+
+    .paral>.content {
+      /* display: inline-block; */
+      transform: skew(-45deg);
+    }
+  </style>
+</head>
+
+<body>
+  <span class="paral">
+    <div class="content">hello</div>
+  </span>
+</body>
+
+</html>

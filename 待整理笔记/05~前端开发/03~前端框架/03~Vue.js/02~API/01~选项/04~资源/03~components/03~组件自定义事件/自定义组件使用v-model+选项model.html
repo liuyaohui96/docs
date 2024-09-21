@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <base-checkbox v-model="lovingVue"></base-checkbox>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+      Vue.config.devtools = true;
+      Vue.component('base-checkbox', {
+        model: {
+          prop: 'checked',
+          event: 'change'
+        },
+        props: {
+          checked: Boolean
+        },
+        template: `
+        <div>
+    <input
+      type="checkbox"
+      v-bind:checked="checked"
+      v-on:change="$emit('change', $event.target.checked)"
+    >  是否喜欢Vue</div>
+  `
+      });
+      let vm = new Vue({
+        el: '#app',
+        data: {
+          lovingVue: true
+        }
+      });
+    </script>
+  </body>
+</html>

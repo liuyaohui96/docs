@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(244, 244, 244);
+  margin: 0;
+}
+
+.section_phone {
+  margin-top: 20px;
+}
+.section_phone .phone {
+  width: 1240px;
+  margin: 0 auto;
+  list-style: none;
+  overflow: hidden; /* important 创建BFC */
+  padding: 0; /* important 重写默认样式 */
+}
+.phone1,
+.phone2 {
+  float: left;
+  width: 615px;
+  height: 610px;
+  background-color: #fff;
+  position: relative;
+}
+.phone1 {
+  margin-right: 9px;
+}
+/* 覆盖链接样式 */
+.phone a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+}
+.red_sign {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  background-image: linear-gradient(120deg, #ff3149, #ff64a6);
+}
+
+.phone-info {
+  padding-top: 60px;
+  display: block;
+}
+.phone-info span {
+  display: block;
+  text-align: center;
+}
+.goods-name {
+  color: #333;
+  font-size: 28px;
+}
+.goods-desc {
+  color: #333;
+  font-size: 18px;
+}
+.goods-price {
+  color: #c00;
+  font-size: 22px;
+}
+.price_small {
+  font-size: 16px;
+  padding-right: 3px;
+}
+.phone_image1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 460px;
+  margin-top: 50px; /* 调整位置 */
+}
+
+/* second row */
+.phone3,
+.phone4,
+.phone5,
+.phone6,
+.phone7,
+.phone8,
+.phone9,
+.phone10 {
+  width: 303px;
+  height: 375px;
+  background-color: #fff;
+  position: relative;
+  float: left;
+  margin-right: 9px;
+  margin-top: 10px;
+}
+.phone6,
+.phone10 {
+  margin-right: 0;
+}
+.phone_image2 {
+  height: 230px;
+  margin-top: 30px;
+}
+.phone-info2 {
+  text-align: center;
+  display: block;
+}
+.phone-info2 span {
+  display: block;
+}
+.phone-info2 .goods-name {
+  font-size: 16px;
+}
+.phone-info2 .goods-desc {
+  font-size: 14px;
+  color: #999;
+}
+.phone-info2 .goods-price {
+  font-size: 22px;
+}
+.phone-info2 s {
+  color: #666;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.blue_sign {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  background-image: linear-gradient(120deg, #2e74f6, #56bdf9);
+}

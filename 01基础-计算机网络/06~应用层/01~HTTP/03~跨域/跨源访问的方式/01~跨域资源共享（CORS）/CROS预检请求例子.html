@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CROS 简单请求例子</title>
+  </head>
+  <body>
+    <button>发起简单请求</button>
+    <p>获取的内容：<span class="content"></span></p>
+    <script>
+      document.querySelector('button').addEventListener('click', clickHandler);
+      let content = document.querySelector('.content');
+      function clickHandler() {
+        crosSimpleRequest('Post', 'http://localhost:3000/').then(
+          value => {
+            content.textContent = value;
+          },
+          error => {
+            content.textContent = '错误：' + error;
+            content.style.color = 'red';
+          }
+        );
+      }
+
+      function crosSimpleRequest(method, url) {
+        return new Promise((resolve, reject) => {
+          const xhr = new XMLHttpRequest();
+          xhr.open(method, url);
+          xhr.setRequestHeader('Ping-Other', 'pingpong');
+          xhr.setRequestHeader('Content-Type', 'application/xml');
+          xhr.send('<person><name>Arun</name></person>');
+          xhr.onload = function() {
+            if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+              // 返回结果
+              resolve(xhr.responseText);
+            } else {
+              // 返回错误信息
+              reject(xhr.statusText);
+            }
+          };
+        });
+      }
+    </script>
+  </body>
+</html>

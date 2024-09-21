@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallelogram平行四边形</title>
+  <style>
+    .wrapper {
+      width: 1000px;
+      margin: 20px auto;
+    }
+
+    .paral {
+      position: relative;
+      padding: 6px 12px;
+      display: inline-block;
+      color: white;
+    }
+
+    .paral::before {
+      content: '';
+      /* To generate the box */
+      position: absolute;
+      /* 所有方向都要有 */
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      /* important */
+      z-index: -1;
+      background: #58a;
+      transform: skew(45deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <span class="paral">hello</span>
+  </div>
+
+</body>
+
+</html>

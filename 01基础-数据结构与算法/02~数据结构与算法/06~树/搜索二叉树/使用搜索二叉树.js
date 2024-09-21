@@ -1,0 +1,35 @@
+const BinarySearchTree = require('./1整体结构')
+let tree = new BinarySearchTree()
+tree.insert(11)
+tree.insert(7)
+tree.insert(15)
+tree.insert(5)
+tree.insert(3)
+tree.insert(9)
+tree.insert(8)
+tree.insert(10)
+tree.insert(13)
+tree.insert(12)
+tree.insert(14)
+tree.insert(20)
+tree.insert(18)
+tree.insert(25)
+tree.insert(6)
+// 深度
+console.log('深度：', tree.treeDepth())
+
+console.log('中序遍历：')
+tree.inOrderTraverse()
+// tree.preOrderTraverse()
+// tree.postOrderTraverse()
+
+// 搜索值
+console.log('tree min value:', tree.min())
+console.log('tree min value:', tree.max())
+console.log(tree.search(7) ? 'founded' : 'not founded')
+
+// 删除值
+tree.remove(6)
+tree.remove(5)
+tree.remove(15)
+tree.inOrderTraverse()

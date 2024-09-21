@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <video id="videoElement" controls="" poster="thumbnail.jpg">
+      <source
+        src="https://s3-ap-northeast-1.amazonaws.com/daniemon/demos/The%2BVillage-Mobile.mp4"
+        type="video/mp4"
+        media="all and (max-width:680px)"
+      />
+      <source
+        src="https://s3-ap-northeast-1.amazonaws.com/daniemon/demos/The%2BVillage-Mobile.webm"
+        type="video/webm"
+        media="all and (max-width:680px)"
+      />
+      <source
+        src="https://s3-ap-northeast-1.amazonaws.com/daniemon/demos/The%2BVillage-SD.mp4"
+        type="video/mp4"
+      />
+      <source
+        src="https://s3-ap-northeast-1.amazonaws.com/daniemon/demos/The%2BVillage-SD.webm"
+        type="video/webm"
+      />
+      <p>
+        Sorry, there's a problem playing this video. Please try using a
+        different browser.
+      </p>
+    </video>
+
+    <script>
+      let video = document.querySelector('video');
+      document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+          video.pause();
+        } else {
+          video.play();
+        }
+      });
+      video.addEventListener('pause', function() {
+        document.title = '视频已经暂停';
+      });
+      video.addEventListener('play', function() {
+        document.title = '视频正在播放';
+      });
+    </script>
+  </body>
+</html>

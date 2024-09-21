@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <todo-list v-bind:todos="todos">
+        <!-- 为 todo 定义一个不一样的 <template> 作为替代方案，并且可以从子组件获取数据 -->
+        <template v-slot:todo="{ todo }">
+          <span v-if="todo.isComplete">✓</span>
+          {{ todo.text }}
+        </template>
+      </todo-list>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+      Vue.component('todo-list', {
+        template: `<ul>
+  <li
+    v-for="todo in filteredTodos"
+    v-bind:key="todo.id"
+  >
+    <slot name="todo" v-bind:todo="todo">
+      <!-- 后备内容 -->
+      {{ todo.text }}
+    </slot>
+  </li>
+</ul>`,
+        props: ['todos'],
+        data: function() {
+          return {
+            filteredTodos: this.todos
+          };
+        }
+      });
+
+      let vm = new Vue({
+        el: '#app',
+        data: {
+          todos: [
+            { id: '03', text: 'hello', isComplete: true },
+            { id: '04', text: 'liu', isComplete: true }
+          ]
+        }
+      });
+    </script>
+  </body>
+</html>

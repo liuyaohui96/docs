@@ -1,0 +1,5 @@
+
+## web存储
+由于所有的cookie都会作为请求头发送，在cookie中存储大量信息会影响到请求性能，而且cookie大小只有4kb，所以开发了其他方法作为客户端存储，如web存储。web存储分为本地存储localstorage和会话存储sessionstorage， web存储适合于用来存储特定于用户的信息。大多数开发者选择的都是localstorage进行持久化的存储。
+
+与cookie类似，web存储与域名是一一对应的，与cookie不一样的是，无法让app.foo.com 使用www.foo.com存储的数据

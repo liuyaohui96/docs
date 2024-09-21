@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .border-box {
+      width: 300px;
+      height: 300px;
+      padding: 50px;
+      background-image: url('http://www.placehold.it/400x400');
+      background-repeat: no-repeat;
+      border: 10px solid rgba(255, 170, 170, .5);
+      background-origin: border-box;
+    }
+
+    .padding-box {
+      width: 300px;
+      height: 300px;
+      padding: 50px;
+      background-image: url('http://www.placehold.it/400x400');
+      background-repeat: no-repeat;
+      border: 10px solid rgba(255, 170, 170, .5);
+      background-origin: padding-box;
+    }
+
+    .content-box {
+      width: 300px;
+      height: 300px;
+      padding: 50px;
+      background-image: url('http://www.placehold.it/400x400');
+      background-repeat: no-repeat;
+      border: 10px solid rgba(255, 170, 170, .5);
+      background-origin: content-box;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="border-box"></div>
+  <br>
+  <div class="padding-box"></div>
+  <br>
+  <div class="content-box"></div>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="emit-example-simple">
+      <welcome-button v-on:welcome="sayHi"></welcome-button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+      Vue.component('welcome-button', {
+        template: `
+    <button v-on:click="$emit('welcome', 'hello ', 'liuyaohui')">
+      Click me to be welcomed
+    </button>
+  `
+      });
+
+      new Vue({
+        el: '#emit-example-simple',
+        methods: {
+          // $emit 的附加参数传递给事件监听器函数作为参数回调
+          sayHi: function(text, text2) {
+            alert(text + ' ' + text2);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+        /* 少于2项时 */
+        li:first-child:nth-last-child(-n+1),
+        li:first-child:nth-last-child(-n+1)~li{
+            color: red;
+        }
+
+        /* 大于等于5项时 */
+        li:first-child:nth-last-child(n+5),
+        li:first-child:nth-last-child(n+5)~li{
+            color: blue;
+        }
+
+        /* 3 到 4 项 时 */
+        li:first-child:nth-last-child(n+3):nth-last-child(-n+4),
+        li:first-child:nth-last-child(n+3):nth-last-child(-n+4)~li{
+            background-color: red;
+        }
+        </style>
+    <ul>
+      <li>苏轼</li>
+    </ul>
+
+    <ul>
+      <li>唐</li>
+      <li>宋</li>
+      <li>元</li>
+      <li>明</li>
+    </ul>
+
+    <ul>
+      <li>测试</li>
+      <li>测试</li>
+      <li>测试</li>
+      <li>测试</li>
+      <li>测试</li>
+    </ul>
+  </body>
+</html>

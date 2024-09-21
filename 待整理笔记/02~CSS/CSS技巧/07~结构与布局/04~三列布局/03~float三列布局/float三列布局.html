@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>float 三列布局</title>
+    <style>
+      .container {
+        overflow: hidden;
+      }
+      .left {
+        float: left;
+        width: 200px;
+      }
+      .right {
+        float: right;
+        width: 200px;
+      }
+      .main {
+        overflow: hidden; /* 创建BFC 不与BFC重叠 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" style="color: #fff;">
+      <div class="left" style="background: red;">
+        left left left left left left left left left left left left left left
+        left left left left left left left left left left left left left left
+        left left left left left left left left left left left left left left
+        left left left left left left left left
+      </div>
+      <div class="right" style="background: green;">
+        right right right right right right right
+      </div>
+      <div class="main" style="background: blue;">
+        main main main main main main main main main main main main main main
+        main main main main main main main main main main main main main main
+        main main main main main main main main main main main main main main
+        main main main main main main main main
+      </div>
+    </div>
+  </body>
+</html>

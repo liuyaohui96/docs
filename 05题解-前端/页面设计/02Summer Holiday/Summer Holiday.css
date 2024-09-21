@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box；;
+}
+body {
+  margin: 0;
+}
+header {
+  background-color: rgb(0, 150, 136);
+  color: #fff;
+  padding: 20px 10px;
+}
+header > h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.main {
+  max-width: 980px;
+  margin: 20px auto;
+}
+.row {
+  overflow: hidden;
+  margin-top: 20px;
+}
+.image {
+  width: 30%;
+  float: left;
+  margin-right: 20px;
+}
+.image > img {
+  width: 100%;
+}
+
+.content > h1 {
+  font-weight: lighter;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.content > p {
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+@media (max-width: 768px) {
+  .image {
+    width: 100%;
+  }
+}

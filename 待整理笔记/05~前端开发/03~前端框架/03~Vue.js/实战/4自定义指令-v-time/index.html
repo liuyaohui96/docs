@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    需求：需要进行时间转换，为了代码的重用，使用自定义指令
+
+    1 分钟以前 显示刚刚
+    1 分钟~1小时之间 显示xx分钟前
+    1 小时到 1天之间，显示xx小时前
+    1 天 到1个月之间，显示xx天天
+    大于1个月，显示 xx 年 xx 月 xx 日
+     -->
+    <div id="app">
+        <div v-time="time1"></div>
+        <div v-time="time2"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="time.js"></script>
+    <script src="index.js"></script>
+   
+</body>
+</html>

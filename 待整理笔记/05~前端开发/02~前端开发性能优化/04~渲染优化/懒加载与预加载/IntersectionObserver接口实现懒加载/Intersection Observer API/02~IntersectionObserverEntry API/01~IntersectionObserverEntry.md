@@ -1,0 +1,6 @@
+
+## IntersectionObserverEntry
+IntersectionObserverEntry对象 描述在特定过渡时刻目标元素与其root容器之间的交集。
+
+
+IntersectionObserverEntry 对象是在 IntersectionObserver回调函数中的entrys参数

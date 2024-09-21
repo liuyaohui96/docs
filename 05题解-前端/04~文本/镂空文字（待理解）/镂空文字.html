@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <style>
+    .cutout-text {
+      position: relative;
+      height: 300px;
+      background-image: url('./mountains.jpg');
+      background-size: 100% 100%;
+    }
+
+    .text {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      padding: 25px 37px;
+      background: #fff;
+      font-size: 48px;
+      text-transform: uppercase;
+      transform: translate(-50%, -50%);
+      mix-blend-mode: screen;
+    }
+  </style>
+  <title>镂空文字</title>
+
+</head>
+
+<body>
+  <h1>镂空文字</h1>
+  <div class="cutout-text">
+    <div class="text">Liu Yaohui</div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<div class="tabs">
+  <div class="tabs-bar">
+    <!-- 循环tabsBar数组-->
+    <!-- 增加单击事件 -->
+    <div
+      v-for="(tab, index) in tabsBar"
+      @click="handleClick(index)"
+      class="[tabs-tab, {'tabs-tab-active': item.name === this.currentValue}]"
+    >
+      {{ tabsBar.title }}
+    </div>
+
+    <div class="tabs-content">
+      <!-- 自定义的panes -->
+      <slot></slot>
+    </div>
+  </div>
+</div>
+
+<div class="pane" v-show="show">
+  <slot></slot>
+</div>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+<body>
+    <h3 class="text-center">Collapse</h3>
+
+    <!-- control collapse elements -->
+    <a href="#example1" class="btn btn-primary" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="example1">
+        control link
+    </a>
+
+    <button class="btn btn-primary" data-target="#example1" data-toggle="collapse" aria-expanded="false" aria-controls="example1">
+        control button
+    </button>
+    
+    <button class="btn btn-primary" id="button1">click to show</button>
+
+    <div class="card ml-3 my-3 collapse w-25" id="example1">
+        <div class="card-header">
+            <h3>example1</h3>
+        </div>
+        <img src="Images/logo1.png" alt="" class="card-img">
+        <div class="card-body">
+            <h3 class="card-title">github</h3>
+            <p>Github is a good website</p>
+            <a href="#" class="card-link">Go to github</a>
+        </div>
+        <div class="card-footer">
+            <p>end</p>
+        </div>
+    </div>
+
+    <!-- accordion start -->
+    <hr>
+    <h3 class="text-center">Accordion</h3>
+    <div class="accordion w-50 ml-3" id="accordion1">
+        <div class="card">
+            <div class="card-header">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aira-expanded="false" aria-controls="collapseOne">
+                    accordion1
+                </button>
+            </div>
+            <div class="collapse show" data-parent="#accordion1" id="collapseOne">
+                    <p class="card-text">
+                        Liuyaohui is good guy. Liuyaohui is good guy. Liuyaohui is good guy. Liuyaohui is good guy. Liuyaohui is good guy. 
+                    </p>
+            </div>
+        </div>
+        <!-- card end -->
+
+        <div class="card">
+            <div class="card-header">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aira-expanded="false" aria-controls="collapseTwo">
+                    accordion2
+                </button>
+            </div>
+            <div class="collapse" data-parent="#accordion1" id="collapseTwo">
+                <p class="card-text">
+                    Liuyaohui is good guy. Liuyaohui is good guy. Liuyaohui is good guy. Liuyaohui is good guy. Liuyaohui is good guy. 
+                </p>
+           </div>
+        </div>
+        <!-- card end -->
+    </div>
+    <!-- accordion end -->
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script>
+        $('#button1').click(
+            function(){
+                $('#example1').collapse('show');
+            }
+        )
+
+        $('#example1').on('show.bs.collapse', function(){
+            alert('start to show');
+        })
+
+        $('#example1').on('shown.bs.collapse', function(){
+            alert('finish show');
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+.application {
+  background-image: url('../images/6.jpg');
+  padding-top: 10px;
+}
+.application h1 {
+  color: #426af1;
+  font-size: 30px;
+  text-align: center;
+}
+.application_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.application .application_content_left img {
+  width: 65px;
+  height: 65px;
+}
+.application_introduce {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.application_content_text {
+  width: 270px;
+  padding: 0 10px;
+}
+.application_content_text h2 {
+  font-size: 20px;
+  margin: 0;
+}
+.application_introduce p {
+  color: #6c7081;
+  font-size: 14px;
+  margin: 0;
+}

@@ -1,0 +1,1 @@
+IE6、7、8支持`document.createElement`产生标签，可以利用这个特性让浏览器支持HTML5标签。

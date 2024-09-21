@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>File(s) size</title>
+  </head>
+
+  <body>
+    <form name="uploadForm">
+      <p>
+        <input id="uploadInput" type="file" name="myFiles" multiple />
+        selected files: <span id="fileNum">0</span>; total size:
+        <span id="fileSize">0</span>
+      </p>
+      <p><input type="submit" value="Send file" /></p>
+    </form>
+
+    <script>
+      const fileInput = document.querySelector('input');
+      const fileNum = document.querySelector('#fileNum');
+      const fileSize = document.querySelector('#fileSize');
+
+      fileInput.addEventListener('change', function() {
+        let files = this.files;
+        let totalBytes = 0;
+        [...files].forEach(file => {
+          totalBytes += file.size;
+        });
+
+        totalBytes = formatBytes(totalBytes);
+        fileNum.textContent = files.length;
+        fileSize.textContent = totalBytes;
+      });
+
+      // 字节单位转换的函数
+      function formatBytes(bytes) {
+        let bytesUnits = [
+          'KiB',
+          'MiB',
+          'GiB',
+          'TiB',
+          'PiB',
+          'EiB',
+          'ZiB',
+          'YiB'
+        ];
+        let rst = bytes + ' bytes';
+        for (
+          let temp = bytes / 1024, unit = 0;
+          temp > 1;
+          temp /= 1024, unit++
+        ) {
+          rst = `${temp.toFixed(3)} ${bytesUnits[unit]} (${bytes} bytes)`;
+        }
+        return rst;
+      }
+    </script>
+  </body>
+</html>

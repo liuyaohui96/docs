@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+<body>
+    <h3>heading 3
+    <span class="badge" id="change1">basic badge</span>
+    <a href="#" class="bdge" id='change2'>link badge</a>
+    <span class="badge badge-pill" id="change3">pill badge</span>
+    <button class="btn btn-secondary">button <span class="badge" id="change4">7</span></button>
+    </h3>
+    <br>
+    <select name="select1" id="select1">
+        <option value="">none</option>
+        <option value="badge-primary">.badge-primary</option>
+        <option value="badge-secondary">.badge-seconadary</option>
+        <option value="badge-info">.badge-info</option>
+        <option value="badge-success">.badge-success</option>
+        <option value="badge-warning">.badge-warning</option>
+        <option value="badge-danger">.badge-danger</option>
+        <option value="badge-dark">.badge-dark</option>
+        <option value="badge-light">.badge-light</option>
+    </select>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script>
+        $('#select1').change(
+            function(){
+                $('#change1').removeClass();
+                $('#change1').addClass('badge '+$(this).val());
+
+                $('#change2').removeClass();
+                $('#change2').addClass('badge '+$(this).val());
+
+                $('#change3').removeClass();
+                $('#change3').addClass('badge badge-pill '+$(this).val());
+
+                $('#change4').removeClass();
+                $('#change4').addClass('badge '+$(this).val());
+            }
+        )
+    </script>
+</body>
+</html>

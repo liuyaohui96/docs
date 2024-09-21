@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      button {
+        height: 40px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script type="text/babel">
+      class LoginControl extends React.Component {
+        constructor(props) {
+          super(props);
+          this.handleLoginClick = this.handleLoginClick.bind(this);
+          this.handleLogoutClick = this.handleLogoutClick.bind(this);
+          this.state = { isLoggedIn: false };
+        }
+
+        handleLoginClick() {
+          this.setState({ isLoggedIn: true });
+        }
+
+        handleLogoutClick() {
+          this.setState({ isLoggedIn: false });
+        }
+
+        render() {
+          const isLoggedIn = this.state.isLoggedIn;
+          let button;
+          let greet;
+
+          if (isLoggedIn) {
+            greet = <h1>Welcome back!</h1>;
+            button = <button onClick={this.handleLogoutClick}>Logout</button>;
+          } else {
+            greet = <h1>Please sign up</h1>;
+            button = <button onClick={this.handleLoginClick}>Login</button>;
+          }
+
+          return (
+            <div>
+              {greet}
+              {button}
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(<LoginControl />, document.getElementById('app'));
+    </script>
+  </body>
+</html>

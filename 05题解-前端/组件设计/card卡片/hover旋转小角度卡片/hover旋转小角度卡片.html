@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    div.card {
+      width: 400px;
+      height: 400px;
+      margin: 10px auto;
+      border-radius: 12px;
+      box-shadow: rgb(0 0 0 / 25%) 0px 25px 50px -12px;
+      background-color: darkcyan;
+
+      transform: perspective(2000px) rotateY(8deg);
+      transition: transform .8s;
+    }
+
+    div.card:hover {
+      transform: perspective(2000px) rotateY(-8deg);
+    }
+  </style>
+  <title>hover旋转小角度卡片</title>
+</head>
+
+<body>
+  <h1>hover旋转小角度卡片</h1>
+  <div class="card"></div>
+</body>
+
+</html>

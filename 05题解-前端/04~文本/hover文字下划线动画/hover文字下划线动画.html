@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hover文字下划线动画</title>
+  <style>
+    p {
+      display: inline-block;
+      position: relative;
+    }
+
+    p::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 4px;
+      background-color: #000;
+      transform: scale(0);
+      transform-origin: left bottom;
+      transition: transform .8s;
+    }
+
+    p:hover::after {
+      transform: scale(1);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>hover文字下划线动画</h1>
+  <p>Hover this text to see the effect!</p>
+</body>
+
+</html>

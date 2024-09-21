@@ -1,0 +1,13 @@
+{
+  "name": "liu-chat",
+  "version": "1.0.0",
+  "description": "a very simple chat application",
+  "main": "index.js",
+  "author": "Liu yaohui",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "mime": "^2.4.4",
+    "socket.io": "^2.2.0"
+  }
+}

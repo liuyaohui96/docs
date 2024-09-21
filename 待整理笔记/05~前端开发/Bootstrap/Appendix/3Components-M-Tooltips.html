@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="d-flex justify-content-center" style="margin: 100px">
+        <button class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" data-title="top tooltip">top tooltip</button>
+        <button class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="right" data-title="right tooltip">right tooltip</button>
+        <button class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="bottom" data-title="bottom tooltip">bottom tooltip</button>
+        <button class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="left" data-title="left tooltip">left tooltip</button>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+</body>
+</html>

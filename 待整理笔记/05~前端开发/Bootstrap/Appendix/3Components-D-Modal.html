@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="d-flex align-items-center mt-3 flex-column">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#example1">Click me</button>
+
+        <div class="modal" id="example1" tabindex="-1">
+            <div class="modal-dialog" id="change1">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal tittle</h5>
+                        <button class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <!-- header end -->
+
+                    <div class="modal-body">
+                        <p>
+                            Hello World!
+                        </p>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Username">  
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Password">
+                        </div>
+                    </div>
+                    <!-- modal-body end -->
+
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button class="btn btn-primary">Save changes</button>
+                    </div>
+                    <!-- modal-footer end -->
+                </div>
+                <!-- modal content end -->
+            </div>
+            <!-- modal dialog end -->
+        </div>
+
+        <select class="form-control w-50 mt-3" name="select1" id="select1">
+            <option value="">none</option>
+            <option value="modal-dialog-centered">.modal-dialog-centered</option>
+            <option value="modal-sm">.modal-sm</option>
+            <option value="modal-lg">.modal-lg</option>
+            <option value="modal-xl">.modal-xl</option>
+        </select>
+    </div>
+    <!-- end -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script>
+        $('#select1').change(
+            function(){
+                $('#change1').removeClass();
+                $('#change1').addClass('modal-dialog '+ $(this).val());
+            }
+        )
+    </script>
+</body>
+</html>

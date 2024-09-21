@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.header {
+  background-color: rgb(158, 158, 158);
+  color: rgb(117, 117, 117);
+  padding: 20px;
+}
+.header h1 {
+  font-size: 50px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.main {
+  background-image: url(bg.jpg);
+  background-size: cover;
+  padding: 20px;
+}
+.row {
+  overflow: hidden;
+}
+.col-7 {
+  float: left;
+  width: 66.33333%;
+  padding: 10px;
+}
+.col-5 {
+  float: left;
+  width: 33.66666%;
+  padding: 10px;
+}
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 4px;
+}
+.card .card-img {
+  position: relative;
+}
+.card img {
+  width: 100%;
+}
+.card .img-absolute {
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  font-size: 25px;
+}
+.card .card-content {
+  padding: 10px;
+  background-color: rgb(241, 241, 241);
+}
+.card-img > .envelope {
+  display: block;
+  font-size: 64px;
+  text-align: center;
+  margin: 30px auto;
+}
+.card-img > .envelope-text {
+  display: block;
+  font-size: 32px;
+  text-align: center;
+  padding: 10px;
+}
+.card-content .card-title {
+  display: block;
+  padding: 10px;
+  text-align: center;
+}
+.mt-3 {
+  margin-top: 20px;
+}

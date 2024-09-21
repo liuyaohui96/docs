@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <style>
+    h1 {
+      text-align: center;
+    }
+    div {
+      width: 200px;
+      height: 200px;
+      margin: auto;
+      border: 1px solid blue;
+    }
+    img {
+      display: block;
+      margin: 20px auto;
+    }
+  </style>
+  <body>
+    <h1>将图片拖到蓝色框内</h1>
+    <div ondragover="allowDrop(event)" ondrop="getData(event)"></div>
+    <img
+      id="example"
+      src="https://picsum.photos/100"
+      alt=""
+      ondragstart="setData(event)"
+      draggable="true"
+    />
+
+    <script>
+      function setData(e) {
+        // 使用dataTranfer属性容纳数据
+        e.dataTransfer.setData("Text", e.target.id);
+      }
+      function allowDrop(e) {
+        e.preventDefault();
+      }
+
+      function getData(e) {
+        // 以链接形式打开
+        e.preventDefault();
+        let elementID = e.dataTransfer.getData("Text");
+        e.target.appendChild(document.getElementById(elementID));
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="alert alert-dismissible" role="alert" id="alert1">
+        <h3 class="alert-heading">h3 with .alert-heading</h3>
+        <p>paragraph in alert</p>
+        <hr>
+        <p>parapgraph in alert, and <a href="#" class="alert-link   ">Link in alert</a>, etc.</p>
+        
+        <button class="close" data-dismiss="alert" aria-label="close">
+            <span aria-hidden="ture">&times;</span>
+        </button>
+    </div>
+
+    <select name="change1" id="change1" class="ml-3">
+        <option value="">none</option>
+        <option value="alert-primary">.alert-primary</option>
+        <option value="alert-secondary">.alert-secondary</option>
+        <option value="alert-info">.alert-info</option>
+        <option value="alert-success">alert-info</option>
+        <option value="alert-warning">.alert-warning</option>
+        <option value="alert-danger">.alert-danger</option>
+        <option value="alert-dark">.alert-dark</option>
+        <option value="alert-light">.alert-light</option>
+    </select>
+
+    <br>
+    <button id="button1" class="mt-3 ml-3">close alert use $().alert('close')</button>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script>
+        $('#change1').change(
+            function(){
+                $('#alert1').removeClass();
+                $('#alert1').addClass('alert alert-dismissible '+$(this).val());
+            }
+        )
+        
+        // alert method
+        $('#button1').click(
+            function(){
+                $('#alert1').alert('close');
+            }
+        )
+
+        // alert event
+        $('#alert1').on('closed.bs.alert', function(){
+            alert("closed.bs.alert");
+        })
+    </script>
+</body>
+</html>

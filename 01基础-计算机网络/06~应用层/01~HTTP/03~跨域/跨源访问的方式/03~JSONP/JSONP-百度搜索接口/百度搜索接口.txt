@@ -1,0 +1,1 @@
+http://suggestion.baidu.com/su?wd=${wd}&cb=${cb}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+        .gallery a img{
+            width: 100px;
+            height: 100px
+        }
+        .photo{
+            position: relative;
+        }
+        .photo img{
+            position: absolute;
+        }
+    </style>
+<body>
+    <div class="gallery">
+        <a href="1.jpg"><img src="1.jpg" alt=""></a>
+        <a href="1_h.jpg"><img src="1_h.jpg" alt=""></a>
+    </div>
+
+    <div class="photo">
+        <img src="1.jpg" alt="">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $('.gallery a').each(
+            function(){
+                $(this).click(function(event){
+                    // 停止默认常规行为
+                    event.preventDefault();
+                    let oldImage=$('.photo img');
+                   
+                    // 在photo内创建新图片
+                    let newSrc=$(this).attr('href');
+                    let newImage = $('<img src="'+newSrc+'">');
+                    $('.photo').prepend(newImage);
+
+                    newImage.hide().fadeIn(1000); // 隐藏才能有淡入效果
+                    oldImage.fadeOut(1000, function(){
+                        $(this).remove();
+                    })
+                }) // end fadeOut
+            }// end click
+        ) // end each
+    </script>
+</body>
+</html>

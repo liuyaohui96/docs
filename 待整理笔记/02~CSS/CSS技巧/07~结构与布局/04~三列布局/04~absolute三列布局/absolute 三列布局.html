@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>absolute 三列布局</title>
+    <style>
+      .left,
+      .main,
+      .right {
+        position: absolute;
+      }
+      .left {
+        left: 0;
+        width: 200px;
+      }
+      .right {
+        right: 0;
+        width: 200px;
+      }
+      .main {
+        left: 200px;
+        right: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper" style="color: #fff;">
+      <div class="left" style="background: red;">
+        left left left left left left left left left left left left left left
+        left left left left left left left left left left left left left left
+        left left left left left left left left left left left left left left
+        left left left left left left left left
+      </div>
+      <div class="main" style="background: green;">
+        main main main main main main main main main main main main main main
+        main main main main main main main main main main main main main main
+        main main main main main main main main main main main main main main
+        main main main main main main main main
+      </div>
+      <div class="right" style="background: blue;">
+        right right right right right right right
+      </div>
+    </div>
+  </body>
+</html>

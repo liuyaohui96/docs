@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function get(url, callback) {
+        let xhr = new XMLHttpRequest();
+        xhr.open('get', url);
+        xhr.onreadystatechange = () => {
+          if (xhr.status == 200 && xhr.readyState == 4) {
+            callback(xhr.responseText);
+          }
+        };
+        xhr.send();
+      }
+      get('data.json', data => {
+        // data 是一个JSON string
+        console.log('hello ' + JSON.parse(data).foo);
+      });
+    </script>
+  </body>
+</html>

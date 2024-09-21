@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .bubble {
+        width: 200px;
+        height: 50px;
+        border: 5px solid #ffb5bf;
+        position: relative;
+      }
+
+      .common {
+        width: 0;
+        height: 0;
+        position: absolute;
+        /* 使用绝对定位 */
+        left: 50%;
+        transform: translate(-50%, 0);
+        /* 水平居中 */
+      }
+
+      .triangle {
+        bottom: -20px;
+        border-top: 20px solid #ffb5bf;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
+      }
+
+      .cover {
+        bottom: -13px;
+        border-top: 20px solid #fff;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="bubble">
+      <div class="triangle common"></div>
+
+      <!-- 用来覆盖的倒三角 -->
+      <div class="cover common"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      input {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <input
+      type="file"
+      id="fileElem"
+      multiple
+      accept="image/*"
+      onchange="handleFiles(this.files)"
+    />
+    <button id="fileSelect">Select some files</button>
+
+    <script>
+      const fileSelect = document.getElementById('fileSelect'),
+        fileElem = document.getElementById('fileElem');
+
+      fileSelect.addEventListener(
+        'click',
+        function(e) {
+          if (fileElem) {
+            fileElem.click();
+          }
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

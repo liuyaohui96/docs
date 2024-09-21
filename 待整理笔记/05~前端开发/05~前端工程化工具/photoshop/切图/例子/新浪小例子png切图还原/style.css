@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.sec-game {
+  width: 360px;
+  margin: 10px auto;
+}
+.tabs {
+  list-style: none;
+  width: 360px;
+  font-size: 14px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.tab {
+  float: left;
+  padding: 10px 15px;
+  background-color: rgb(249, 249, 249);
+  border: 1px solid rgb(219, 222, 225);
+}
+.tab:not(:first-child) {
+  border-left-width: 0;
+}
+.tab:hover {
+  color: rgb(255, 132, 0);
+}
+
+.content .img {
+  float: left;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+.img > img {
+  width: 106px;
+  height: 70px;
+  box-sizing: border-box;
+}
+
+.content h3 {
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+.content .img:hover {
+  border: 1px solid rgb(255, 132, 0);
+}
+.content .img:hover h3 {
+  color: rgb(255, 132, 0);
+}
+
+.content .list {
+  float: left;
+  list-style: none;
+  margin-left: 9px;
+  font-size: 14px;
+}
+
+.content .list li {
+  background: url(./2.png) no-repeat 15px center;
+  padding-left: 25px;
+}

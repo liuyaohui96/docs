@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      /* 将容器转换变形后，内容再反转 */
+      .container {
+        width: 200px;
+        height: 200px;
+        background-color: #000;
+        transform: rotate(45deg);
+        color: #fff;
+        margin: 50px auto; /* 居中，让菱形显示得更加清晰 */
+      }
+      .content {
+        /* 转换反转 */
+        transform: rotate(-45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">hello world</div>
+    </div>
+  </body>
+</html>

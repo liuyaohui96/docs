@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 
+    知识点：v-for列表渲染
+    data
+    computed
+    method & 事件处理
+
+     -->
+    <div id="app">
+        <template v-if="shopList.length">
+                <table>
+                        <thead>
+                            <tr>
+                            </tr>
+                            <th></th>
+                            <th>商品名称</th>
+                            <th>商品单价</th>
+                            <th>
+                                购买数量
+                            <th>操作</th>
+                        </thead>
+                            
+                        <tbody>
+                            <tr v-for="(item, index) in shopList">
+                                <td>{{item.id}}</td>
+                                <td>{{item.name}}</td>
+                                <td>
+                                    {{item.price}}
+                                   </th>
+                                </td>
+                                <td>
+                                    <button @click="handleReduce(index)">-</button>
+                                    {{item.number}}
+                                    <button @click="handleAdd(index)">+</button>
+                                </td>
+                                <td><button @click="removeItem(index)">移除</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+        </template>
+        <p v-else> 购物车为空</p>
+        
+        <div>总价：￥ {{total}}</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

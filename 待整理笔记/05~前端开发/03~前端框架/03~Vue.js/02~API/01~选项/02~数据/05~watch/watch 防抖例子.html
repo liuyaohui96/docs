@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <div>firstName: <input v-model="firstName" /></div>
+      <div>lastName: <input v-model="lastName" /></div>
+      fullName: {{ fullName }}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+      let vm = new Vue({
+        el: '#app',
+        data: {
+          firstName: 'liu',
+          lastName: 'yaohui',
+          fullName: 'liuyaohui'
+        },
+        watch: {
+          firstName: function(val) {
+            clearTimeout(this.firstTimeout);
+            this.firstTimeOut = setTimeout(() => {
+              this.fullName = val + ' ' + this.lastName;
+            }, 1000);
+          },
+          lastName: function(val) {
+            clearTimeout(this.lastTimeout);
+            this.lastTimeOut = setTimeout(() => {
+              this.fullName = this.firstName + ' ' + val;
+            }, 1000);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

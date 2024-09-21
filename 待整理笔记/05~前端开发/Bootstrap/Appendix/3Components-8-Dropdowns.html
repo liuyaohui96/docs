@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+<body>
+    <h3 class="text-center">Dropdowns</h3>
+    <div class="dropdown text-center" id="change1" style="margin-top: 130px">
+        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" data-haspopup="true" data-expanded="false">
+            dropdown button dropdown button dropdown button
+        </button>
+        <div class="dropdown-menu" id="change2">
+            <h5 class="dropdown-header">header</h5>
+            <a href="#" class="dropdown-item">Link1</a>
+            <a href="#" class="dropdown-item">Link2</a>
+            <div class="dropdown-divider"></div>
+            <span class="dropdown-text">dropdown text</span>
+        </div>
+    </div>
+
+    <select name="select1" id="select1" class="d-block mx-auto mt-3">
+        <option value="dropdown">default</option>
+        <option value="dropup">.dropup</option>
+        <option value="dropright">.dropright</option>
+        <option value="dropleft">.dropleft</option>
+    </select>
+    <!-- select end -->
+
+    <select name="select2" id="select2" class="d-block mx-auto mt-3">
+        <option value="">default</option>
+        <option value="dropdown-menu-right">.dropdown-menu-right</option>
+        <option value="dropdown-menu-left">.dropdown-menu-left</option>        
+    </select>
+
+    
+
+    <div class="text-center">
+    <div class="btn-group mt-3">
+            <buttton class="btn btn-danger">dropdown split button</buttton>
+            <button class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" data-haspopup="true" data-expanded="false">
+                <span class="sr-only">toggle dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+                <h5 class="dropdown-header">header</h5>
+                <a href="#" class="dropdown-item">Link1</a>
+                <a href="#" class="dropdown-item">Link2</a>
+                <div class="dropdown-divider"></div>
+                <span class="dropdown-text">dropdown text</span>
+            </div>
+    </div>
+    </div>
+    <!-- button end -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script>
+        $('#select1').change(function(){
+            $('#change1').removeClass();
+            $('#change1').addClass('text-center ' + $(this).val());
+        })
+
+        $('#select2').change(function(){
+            $('#change2').removeClass();
+            $('#change2').addClass('dropdown-menu ' + $(this).val());
+        })
+    </script>
+</body>
+</html>

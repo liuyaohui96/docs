@@ -1,0 +1,13 @@
+.row {
+  display: flex;
+}
+
+.col {
+  background: #ffa500;
+  flex: 1;
+  padding: 18px 37px;
+}
+
+.col:nth-child(2) {
+  background: yellow;
+}

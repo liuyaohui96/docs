@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+header {
+  background-color: rgba(241, 241, 241);
+  padding: 100px 0px;
+}
+header > h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.main {
+  /* max-width: 1300px; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 0 10px;
+  overflow: hidden;
+}
+.main-content {
+  float: left;
+  width: 66.66666%;
+  padding: 0 10px;
+}
+
+.main-img {
+  width: 100%;
+}
+
+.main-aside {
+  float: left;
+  width: 33.33333%;
+  padding: 0 10px;
+}
+
+.main-card {
+  background-color: rgb(241, 241, 241);
+  padding: 10px;
+}
+.main-card > h2 {
+  margin-top: 0px;
+}
+.mt-3 {
+  margin-top: 2rem;
+}

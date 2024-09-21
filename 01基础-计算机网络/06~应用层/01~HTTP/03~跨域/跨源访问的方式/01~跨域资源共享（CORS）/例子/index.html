@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    hello
+    <script>
+      // 写ajax
+      let xhr = new XMLHttpRequest();
+      document.cookie = 'name=liuyaohui';
+      // 强制带上cookie
+      xhr.withCredentials = true;
+      xhr.open('put', 'http://localhost:5000/getData', true);
+      xhr.setRequestHeader('name', 'liuyaohui');
+      xhr.onreadystatechange = () => {
+        if (xhr.readyState == 4) {
+          if ((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304) {
+            console.log(xhr.response);
+            console.log(xhr.getResponseHeader('name'));
+          }
+        }
+      };
+      xhr.send();
+    </script>
+  </body>
+</html>

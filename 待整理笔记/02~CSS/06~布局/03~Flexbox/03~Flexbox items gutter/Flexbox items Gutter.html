@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Flexbox items Gutter</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .wrapper {
+        border: 2px dotted rgb(96, 139, 168);
+        width: 500px;
+      }
+      .box {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -10px;
+      }
+      .box > * {
+        background: blue;
+        flex: 1 1 160px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+        <div>Four</div>
+        <div>Five</div>
+        <div>Six</div>
+        <div>Seven</div>
+        <div>Eight</div>
+        <div>Nine</div>
+        <div>Ten</div>
+      </div>
+    </div>
+  </body>
+</html>

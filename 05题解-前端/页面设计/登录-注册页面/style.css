@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+div.bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: url(./reg_bg_min.jpg) no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.container {
+  width: fit-content;
+  margin: 100px auto;
+  padding: 40px;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+/* === title */
+.container h2 {
+  margin: 0;
+}
+
+/* === title end */
+
+/* === hyperlink */
+.container a {
+  color: blue;
+  text-decoration: none;
+}
+
+/* === end hyperlink */
+
+.container form {
+  margin-top: 20px;
+}
+
+form div:not(:first-child) {
+  margin-top: 10px;
+}
+
+form label {
+  color: #333;
+  font-weight: 200;
+}
+
+form input:not(#check-secret)~label {
+  display: inline-block;
+  width: 50px;
+  margin-right: 10px;
+  text-align: right;
+}
+
+
+form input.form-control {
+  width: 400px;
+  padding: 12px 8px;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+}
+
+form input.form-control:focus {
+  outline: none;
+}
+
+/* override */
+form input#tel-verfify-number {
+  width: 200px;
+  margin-right: 10px;
+}
+
+form input#tel-verfify-number+button {
+  width: 190px;
+  padding: 12px 8px;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 200;
+}
+
+button.register {
+  width: 460px;
+  margin-top: 20px;
+  padding: 12px 8px;
+  border: 0;
+  border-radius: 12px;
+  background-color: #3f89ec;
+  color: #fff;
+  cursor: pointer;
+}

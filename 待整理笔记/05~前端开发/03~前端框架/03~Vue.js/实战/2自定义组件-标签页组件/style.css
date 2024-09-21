@@ -1,0 +1,11 @@
+.tabs-bar {
+  display: flex;
+}
+.tabs-tab {
+  color: blue;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.tabs-tab-active {
+  color: red;
+}

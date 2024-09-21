@@ -1,0 +1,1 @@
+Socket.io 为Node及客户端JavaScript提供了基于Websocket以及传输方式的封装。

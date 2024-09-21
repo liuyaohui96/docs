@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>防抖</title>
+  </head>
+  <body>
+    <button id="btn">按钮</button>
+    <script type="text/javascript">
+      let timer = null;
+      function debounce(fn, delay) {
+        console.log(delay);
+        return function() {
+          // 清除上一次延时器
+          clearTimeout(timer);
+          timer = setTimeout(function() {
+            // 设置timer调用函数
+            fn.apply(this);
+          }, delay);
+        };
+      }
+
+      document.getElementById('btn').addEventListener(
+        'click',
+        debounce(function() {
+          console.log('点击事件被触发' + new Date().toLocaleString());
+        }, 1000)
+      );
+    </script>
+  </body>
+</html>

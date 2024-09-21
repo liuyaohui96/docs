@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      /* 仅举例切四个角，与切普通角对比，仅使用radial-gradient 代替 linear-gradient */
+      div {
+        width: 100px;
+        height: 100px;
+        /* 用于回退 */
+        background: #58a;
+        background: radial-gradient(
+              circle at top left,
+              transparent 15px,
+              #58a 0
+            )
+            top left,
+          radial-gradient(circle at top right, transparent 15px, #58a 0) top
+            right,
+          radial-gradient(circle at bottom left, transparent 15px, #58a 0)
+            bottom left,
+          radial-gradient(circle at bottom right, transparent 15px, #58a 0)
+            bottom right;
+        background-repeat: no-repeat;
+        background-size: 50% 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

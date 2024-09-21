@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 
+    标签页组件需求：
+    1. tab的数量是不固定的
+    2. tab 的组成是tab-bar和pane，tab-bar是tabs的标题栏，pane是详细内容
+    
+    思路：
+    1. 设计一个tabs组件，由tab-bar 和 tab-cotent 组成，其中tab-content是自定义内容，所以使用slot
+    2. tab-content 可以接受多个pane，pane的titile将会传递给父组件的tab-content，
+        不同的pane使用name进行区分，所以pane组件接受title和pane两个属性，pane构建完就会将数据向上传递给
+        tabs组件
+        pane 根据show确定是否显示
+    3. tabs组件接受一个target属性值，用于确定默认显示哪一个panel
+
+
+
+     -->
+    <div id="app">
+        <Tabs :target="target">
+            <pane title="标签1" name="标签1">标签1内容</pane>
+            <pane title="标签2" name="标签2">标签2内容</pane>
+        </Tabs>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="pane.js"></script>
+    <script src="tabs.js"></script>
+    <script src="index.js"></script>
+  
+</body>
+</html>

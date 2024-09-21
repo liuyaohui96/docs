@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div id="info"></div>
+      <button class="btn btn-primary mt-3" id="btn">Ajax request</button>
+    </div>
+
+    <script>
+      function createXhr() {
+        if (window.XMLHttpRequest) {
+          return new XMLHttpRequest();
+        } else {
+          return new ActiveXObject("Microsoft.XMLHttpRequest");
+        }
+      }
+
+      document.getElementById("btn").addEventListener("click", () => {
+        let xhr = createXhr();
+        xhr.open("get", "./response.js", true);
+        xhr.onreadystatechange = () => {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            // console.log("ok");
+            document.getElementById("info").innerHTML = xhr.responseText;
+          }
+        };
+        xhr.send(null);
+      });
+    </script>
+  </body>
+</html>

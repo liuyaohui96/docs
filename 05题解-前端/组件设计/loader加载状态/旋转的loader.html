@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @keyframes spinner-loader {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .spinner-loader {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #0d6efd;
+      border-right-color: transparent;
+      border-radius: 50%;
+      animation: spinner-loader linear .75s infinite;
+    }
+  </style>
+  <title>旋转的loader</title>
+</head>
+
+<body>
+  <h1>旋转的loader</h1>
+  <div class="spinner-loader"></div>
+</body>
+
+</html>

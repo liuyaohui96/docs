@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <input v-focus />
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+      let vm = new Vue({
+        el: '#app',
+        // 实例注册一个自定义指令实现input自动聚焦
+        directives: {
+          focus: {
+            // 指令的定义
+            inserted: function(el) {
+              el.focus();
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

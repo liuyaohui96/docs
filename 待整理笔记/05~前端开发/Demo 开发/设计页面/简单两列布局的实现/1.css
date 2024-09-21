@@ -1,0 +1,44 @@
+header {
+  position: relative;
+  border: 1px solid green;
+  height: 80px;
+}
+header .logo {
+  border: 1px solid red;
+  width: 100px;
+  height: 40px;
+  margin: 20px;
+}
+header .username {
+  position: absolute;
+  width: 100px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px solid #000;
+  text-align: right;
+}
+
+main {
+  margin-top: 20px;
+  overflow: hidden;
+}
+.content {
+  float: left;
+  width: 100%;
+}
+.content div {
+  margin-right: 250px;
+  border: 1px solid blue;
+  height: 400px;
+}
+.aside {
+  margin-left: -200px;
+  float: left;
+  border: 1px solid red;
+}
+
+footer {
+  margin-top: 20px;
+  border: 1px solid #000;
+  text-align: center;
+}

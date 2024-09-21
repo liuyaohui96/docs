@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>websocket跨源发送数据</button>
+    <script>
+      document.querySelector('button').addEventListener('click', function() {
+        let socket = new WebSocket('ws://localhost:3000');
+        socket.onopen = function() {
+          socket.send('From Client: 能收到吗？'); //向服务器发送数据
+        };
+        socket.onmessage = function(e) {
+          console.log(e.data); //接收服务器返回的数据
+        };
+      });
+    </script>
+  </body>
+</html>

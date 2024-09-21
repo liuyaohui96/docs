@@ -1,0 +1,16 @@
+body {
+  height: 100vh;
+}
+img {
+  background: #eee;
+  width: 400px;
+  height: 300px;
+  display: block;
+  margin: 10px auto;
+  transform: scale(0);
+}
+
+.fadeIn {
+  transform: scale(1);
+  transition: all 500ms linear;
+}

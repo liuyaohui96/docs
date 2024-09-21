@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script type="text/babel">
+      class Reservation extends React.Component {
+        constructor(props) {
+          super(props);
+          // 将state对象中的属性与input的name关联起来
+          this.state = {
+            isGoing: true,
+            numberOfGuests: 2
+          };
+
+          this.handleInputChange = this.handleInputChange.bind(this);
+        }
+
+        handleInputChange(event) {
+          const target = event.target;
+          const value =
+            target.type === 'checkbox' ? target.checked : target.value;
+          const name = target.name;
+
+          this.setState({
+            [name]: value
+          });
+        }
+
+        render() {
+          return (
+            <form>
+              <label>
+                参与:
+                <input
+                  name="isGoing"
+                  type="checkbox"
+                  checked={this.state.isGoing}
+                  onChange={this.handleInputChange}
+                />
+              </label>
+              <br />
+              <label>
+                来宾人数:
+                <input
+                  name="numberOfGuests"
+                  type="number"
+                  value={this.state.numberOfGuests}
+                  onChange={this.handleInputChange}
+                />
+              </label>
+            </form>
+          );
+        }
+      }
+      ReactDOM.render(<Reservation />, document.querySelector('#app'));
+    </script>
+  </body>
+</html>

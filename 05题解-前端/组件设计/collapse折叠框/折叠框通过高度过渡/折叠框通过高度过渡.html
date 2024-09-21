@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .collapse {
+      overflow: hidden;
+      height: 0;
+      transition: height .3s;
+    }
+
+    .container:hover .collapse {
+      height: var(--collapse-height);
+    }
+  </style>
+  <title>折叠框通过高度过渡</title>
+</head>
+
+<body>
+  <h1>折叠框通过高度过渡</h1>
+  <div class="container">
+    Hover me to see a height transition.
+    <div class="collapse">Additional content</div>
+  </div>
+
+  <script>
+    const collapse = document.querySelector('.collapse')
+    collapse.style.setProperty('--collapse-height', collapse.scrollHeight + 'px')
+  </script>
+</body>
+
+</html>

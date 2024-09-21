@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+<body>
+    <h3 class="text-center">button</h3>
+    <button class="btn" id="change1">basic button</button>
+   
+    <br>
+    <select name="select1" id="select1" class="mt-3 mb-3">
+        <option value="">none</option>
+        <option value="btn-block">.btn-block</option>
+        <option value="btn-lg">.btn-lg</option>
+        <option value="btn-sm">.btn-sm</option>
+        <option value="btn-primary">.btn-primary</option>
+        <option value="btn-secondary">.btn-primary</option>
+        <option value="btn-info">.btn-info</option>
+        <option value="btn-success">.btn-success</option>
+        <option value="btn-warning">.btn-warning</option>
+        <option value="btn-danger">.btn-danger</option>
+        <option value="btn-dark">.btn-dark</option>
+        <option value="btn-light">.btn-light</option>
+        <option value="btn-link">.btn-link</option>
+    </select>
+    
+    <br>
+    <button class="btn btn-primary">.btn .btn-primary</button>
+    <button class="btn btn-primary active" aria-pressed="true">.btn .btn-primary .active</button>
+    <button class="btn btn-primary disabled">.btn .btn-primary .disabled</button>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script>
+        $('#select1').change(
+            function(){
+                $('#change1').removeClass();
+                $('#change1').addClass('btn ' + $(this).val());
+            }
+        )
+    </script>
+</body>
+</html>

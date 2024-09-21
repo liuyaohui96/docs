@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      .line {
+        /* 使用border实现 */
+        border-top: 50px solid red;
+        border-left: 150px solid blue;
+        position: relative;
+      }
+      .first {
+        position: absolute;
+        left: -100px;
+        top: -25px;
+        color: #fff;
+      }
+      .second {
+        position: absolute;
+        left: -50px;
+        top: -40px;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="1">
+      <caption>
+        caption
+      </caption>
+      <thead>
+        <tr>
+          <th>
+            <div class="line">
+              <span class="first">日期</span>
+              <span class="second">详情</span>
+            </div>
+          </th>
+          <th>The table header</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>Name</th>
+          <th>Instrument</th>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td>The table body</td>
+          <td>with two columns</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

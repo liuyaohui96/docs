@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+<body>
+    <h3>equal width</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col bg-primary">.col</div>
+            <div class="col bg-success">.col</div>
+            <div class="col bg-danger">.col</div>
+        </div>
+    </div>
+    <!-- equal column end -->
+
+    <h3 class="mt-3">set one column width</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col bg-primary">.col</div>
+            <div class="col-6 bg-success">.col-6</div>
+            <div class="col bg-danger">.col</div>
+        </div>
+    </div>
+    <!-- set one collumn width end     -->
+
+    <h3 class="mt-3">set column width based to its content</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-auto bg-primary">.col-auto</div>
+            <div class="col-auto bg-success">.col-auto</div>
+            <div class="col-auto bg-danger">.col-auto</div>
+        </div>
+    </div>
+    <!-- col-*-auto end -->
+
+    <h3 class="mt-3">multi row in one row div by applying .w-100</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col bg-primary">.col</div>
+            <div class="col bg-success">.col</div>
+            <div class="w-100"></div>
+            <div class="col-md-5 bg-danger">.col .col-md-5</div>
+            <div class="col-md-7 bg-warning">.col .col-md-7</div>
+            <div class="w-100"></div>
+            <div class="col bg-primary">.col</div>
+            <div class="col bg-success">.col</div>  
+        </div>
+    </div>
+    <!-- multi row in one row div end -->
+
+    <h3 class="mt-3">more grid tiers</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4 bg-primary">col-12 col-md-4</div>
+            <div class="col-6 col-md-4 bg-success">col-6 col-md-4</div>
+            <div class="col-6 col-md-4 bg-danger">col-6 col-md-4</div>
+        </div>
+    </div>
+    <!-- more grid tiers end -->
+    
+    <h3 class="mt-3">horizontal alignment</h3>
+    <div class="container" >
+        <div class="row justify-content-start" id="change1">
+            <div class="col-4 bg-primary">col-4</div>
+            <div class="col-4 bg-success">col-4</div>
+        </div>
+    </div>
+    <select name="horizontal-alignment" id="horizontal-alignment" class="mt-3 mb-3">
+        <option value="justify-content-start">.justify-content-start</option>
+        <option value="justify-content-end">.justify-content-end</option>
+        <option value="justify-content-center">.justify-content-center</option>
+        <option value="justify-content-around">.justify-content-around</option>
+        <option value="justify-content-between">.justify-content-between</option>
+    </select>
+    <!-- horiozntal alignment end -->
+    
+    <h3 class="mt-3">vertical alignment</h3>
+    <div class="bg-secondary container">
+        <div style="height:100px;" class="row align-items-start" id="change2">
+            <div class="col-4 bg-primary">.col4</div>
+        </div>
+    </div>
+
+    <select name="vertical-alignment" id="vertical-alignment" class="mt-3 mb-3">
+        <option value="align-items-start">.align-items-start</option>
+        <option value="align-items-center">.align-items-center</option>
+        <option value="align-items-end">.align-items-end</option>
+    </select>
+    <!-- vertical alignment end -->
+
+    <h3 class="mt-3">vertical alignment apply to one column</h3>
+    <div class="container">
+        <div style="height:100px" class="row bg-secondary">
+            <div class="col-4 align-self-start bg-primary">.align-self-start</div>
+            <div class="col-4 align-self-center bg-primary">.align-self-center</div>
+            <div class="col-4 align-self-end bg-primary">.align-self-end</div>
+        </div>
+    </div>
+    <!-- vertical alignment apply to one column end -->
+    
+    <h3 class="mt-3">column auto wrap</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-9 bg-primary">.col-9</div>
+            <div class="col-4 bg-success">.col-4</div>
+        </div>
+    </div>
+    <!-- column auto wrap end -->
+
+    <h3 class="mt-3">nested column in a column</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-7 bg-secondary">
+                .col-7
+                <div class="row">
+                    <div class="col-6 bg-primary">.col-6</div>
+                    <div class="col-6 bg-success">.col-6</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- nested column in a column end -->
+
+    <h3 class="mb-5 mt-5 text-center">end</h3>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script>
+        $('#horizontal-alignment').change(
+            function(){
+                $('#change1').removeClass();
+                $('#change1').addClass("row "+$(this).val());
+            }
+        )
+        $('#vertical-alignment').change(
+            function(){
+                $('#change2').removeClass();
+                $('#change2').addClass("row "+$(this).val());
+
+            }
+        )
+    </script>
+</body>
+</html>

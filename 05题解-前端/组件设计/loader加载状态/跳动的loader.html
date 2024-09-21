@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @keyframes bouncing-loader {
+      to {
+        opacity: .2;
+        transform: translate(0, -20px);
+      }
+    }
+
+    .bouncing-loader {
+      display: flex;
+      justify-content: center;
+      gap: 3px;
+    }
+
+    .bouncing-loader>div {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #8385aa;
+      animation: bouncing-loader .6s infinite alternate;
+    }
+
+    .bouncing-loader>div:nth-child(2) {
+      animation-delay: .2s;
+    }
+
+    .bouncing-loader>div:nth-child(3) {
+      animation-delay: .4s;
+    }
+  </style>
+  <title>spinner loader</title>
+</head>
+
+<body>
+  <h1>跳动的loader</h1>
+  <div class="bouncing-loader">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+
+</html>

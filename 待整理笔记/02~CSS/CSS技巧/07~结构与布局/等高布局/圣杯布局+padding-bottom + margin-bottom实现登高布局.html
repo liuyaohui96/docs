@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>圣杯布局</title>
+    <style>
+      .container {
+        /* 创建BFC，利用BFC中浮动元素参与高度计算的特性 */
+        overflow: hidden;
+        padding-left: 400px;
+        padding-right: 200px;
+      }
+      .main,
+      .left,
+      .right {
+        float: left; /* 三列都是浮动才有可能实现同一行的可能 */
+        padding-bottom: 9999px;
+        margin-bottom: -9999px;
+      }
+
+      .main {
+        width: 100%; /* 中间列宽度占满 */
+      }
+
+      .left {
+        width: 400px; /* 左列固定宽度 */
+        margin-left: -100%;
+        position: relative;
+        right: 400px;
+      }
+
+      .right {
+        width: 200px;
+        margin-left: -200px;
+        position: relative;
+        left: 200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container" style="color: #fff;">
+      <div class="main" style="background-color: green;">
+        圣杯布局中间列 圣杯布局中间列 圣杯布局中间列 圣杯布局中间列
+        圣杯布局中间列 圣杯布局中间列 圣杯布局中间列 圣杯布局中间列
+        圣杯布局中间列 圣杯布局中间列 圣杯布局中间列 圣杯布局中间列
+      </div>
+      <div class="left" style="background-color: red;">圣杯布局左列</div>
+      <div class="right" style="background-color: blue;">圣杯布局右列</div>
+    </div>
+  </body>
+</html>

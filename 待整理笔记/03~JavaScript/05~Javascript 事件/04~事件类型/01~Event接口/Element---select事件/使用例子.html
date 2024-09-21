@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>select 事件使用例子</title>
+  </head>
+  <body>
+    <input value="Try selecting some text in this element." />
+    <p id="log"></p>
+    <script>
+      function logSelection(event) {
+        const log = document.getElementById('log');
+        const selection = event.target.value.substring(
+          event.target.selectionStart,
+          event.target.selectionEnd
+        );
+        log.textContent = `You selected: ${selection}`;
+      }
+
+      const input = document.querySelector('input');
+      input.addEventListener('select', logSelection);
+    </script>
+  </body>
+</html>

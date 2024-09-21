@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      /* 另一种解决办法不在列举，父级元素设置padding-top, 标准模型下增加了父级盒子的高度，
+      可以减少相应的高度尺寸，或者设置box-sizing 为border-box
+       */
+      .box1,
+      .box3 {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+      .box2,
+      .box4 {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        /* margin-top: 100px; */
+      }
+
+      .box3 {
+        overflow: hidden;
+        /* border: 1px solid #000; */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>margin-top 传递问题</h1>
+    <div class="box1">
+      <div class="box2"></div>
+    </div>
+  </body>
+
+  <hr />
+  <h1>解决</h1>
+  <div class="box3">
+    <div class="box4"></div>
+  </div>
+</html>

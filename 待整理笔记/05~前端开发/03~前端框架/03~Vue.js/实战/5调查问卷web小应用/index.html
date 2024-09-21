@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app" v-cloak>
+        <form>
+            <div v-if="genderShow">
+                <legend>1. 请问你的性别是</legend>
+                <span>
+                    <input type="radio" name="gender" id="gender1" value="gender1" v-model="gender">
+                    <label for="gender1">男</label>
+                </span>
+                    <span>
+                    <input type="radio" name="gender" id="gender2" value="gender2" v-model="gender">
+                    <label for="gender2">女</label>
+                </span>
+                    <span>
+                    <input type="radio" name="gender" id="gender3" value="gender3" v-model="gender">
+                    <label for="gender3">保留</label>
+                </span>
+                <div class="mt-1">
+                    <button @click="nextStep('gender', 'hobby')">下一步</button>
+                    <button @click="reset('gender')">重置</button>
+                </div>
+            </div>
+
+            <div v-if="hobbyShow">
+                <legend>2. 请选择你的兴趣爱好</legend>
+                <div>
+                    <input type="checkbox" name="hobby" id="hobby1" value="hobby1" v-model="hobby">
+                    <label for="hobby1">看书</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="hobby" id="hobby2" value="hobby2" v-model="hobby">
+                    <label for="hobby2">游泳</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="hobby" id="hobby3" value="hobby3" v-model="hobby">
+                    <label for="hobby3">跑步</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="hobby" id="hobby4" value="hobby4" v-model="hobby">
+                    <label for="hobby4">看电影</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="hobby" id="hobby5" value="hobby5" v-model="hobby">
+                    <label for="hobby5">听音乐</label>
+                    <div class="mt-1">
+                        <button @click="lastStep('hobby', 'gender')">上一步</button>
+                        <button @click="nextStep('hobby', 'intro')">下一步</button>
+                        <button @click="reset('hobby')">重置</button>
+                    </div>
+                </div>
+            </div>
+       
+            <div v-if="introShow">
+                <legend>3. 请介绍一下自己</legend>
+                <textarea name="intro" id="" cols="30" rows="10" placeholder="不少于100字" minlength="100" v-model="textarea"></textarea>
+                <div class="mt-1">
+                    <input type="submit" value="提交">
+                    <button @click="lastStep('intro', 'hobby')">上一步</button>
+                    <button @click="reset('intro')">重置</button>
+                </div>
+            
+            </div>
+    </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "张三",
+      "gender": 0,
+      "age": 24,
+      "hobbies": "阅读"
+    },
+    {
+      "id": 2,
+      "name": "李四",
+      "gender": 1,
+      "age": 24,
+      "hobbies": "运动"
+    }
+  ]
+}

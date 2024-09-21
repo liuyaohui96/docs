@@ -1,0 +1,32 @@
+[0.0]: #
+[1.0]: #
+[2.0]: #
+[3.0]: #
+[4.0]: #
+
+#### [⬆ Back to top][0.0]
+
+https://823406519.github.io/Bootstrap/Appendix/
+
+See rendering result
+
+See source code
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+$('#horizontal-alignment').change(
+            function(){
+                $('#change1').removeClass();
+                $('#change1').addClass("row "+$(this).val());
+            }
+)
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+
+https://raw.githubusercontent.com/823406519/Bootstrap/master/Appendix/Images/logo1.png

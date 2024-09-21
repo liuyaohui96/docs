@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .pie {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #0077ff;
+      color: #fff;
+
+      /* 覆盖颜色 */
+      background-image: linear-gradient(to right, transparent 50%, #655 0);
+    }
+
+    .pie::before {
+      content: '';
+      display: block;
+      margin-left: 50%;
+      height: 100%;
+      border-radius: 0 100% 100% 0 /50%;
+      /* 与宿主元素背景一致 */
+      background-color: inherit;
+      /* 360 * .2 = 72deg */
+      transform-origin: left;
+      /* transform: rotate(.3turn); */
+      /* overflow: hidden; */
+      animation: spin 3s infinite, bg 6s step-end infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(.5turn)
+      }
+    }
+
+    @keyframes bg {
+      50% {
+        background-color: #655;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pie">
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+body {
+  --column-count-small: 1;
+  --column-count-medium: 2;
+  --column-count-large: 3;
+}
+
+.column-container {
+  column-count: var(--column-count-small);
+  column-width: calc(1/var(--coumn-count-small) * 100%);
+  column-gap: 5px;
+}
+
+img {
+  width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .column-container {
+    column-count: var(--column-count-medium);
+    column-width: calc(1/var(--column-count-medium) * 100%);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .column-container {
+    column-count: var(--column-count-large);
+    column-width: calc(1/var(--column-count-large) * 100%);
+  }
+}

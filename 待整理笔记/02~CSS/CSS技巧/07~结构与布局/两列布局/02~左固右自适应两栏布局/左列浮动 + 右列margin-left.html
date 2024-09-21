@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      /* 内部有浮动元素，一般创建BFC，使得浮动元素参与高度计算 */
+      overflow: hidden;
+    }
+    .left {
+      float: left;
+      width: 100px;
+      /* 固定宽度数字不换行会溢出，可以强行break */
+      /* word-break: break-all; */
+    }
+
+    .right {
+      margin-left: 100px;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="left" style="background-color: #FFB5BF;">
+        left left left left left left left left left left
+      </div>
+      <div class="right" style="background-color: #94E8FF;">
+        right right right right right right right right right right right right
+        right right right right right right right right right right right right
+        right right right right right right right right right right right right
+        right right right right right right right right right right right right
+        right right right
+      </div>
+    </div>
+    <div>hello world</div>
+  </body>
+</html>

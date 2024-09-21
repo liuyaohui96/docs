@@ -1,0 +1,21 @@
+body {
+  background-color: #c4d3f6;
+}
+
+table {
+  border-radius: 7px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.table-thead-bg {
+  background-color: #3f53e7;
+}
+
+table thead tr:hover {
+  background-color: #489af1;
+}
+
+table tbody tr:hover {
+  background-color: #f8eaea;
+}

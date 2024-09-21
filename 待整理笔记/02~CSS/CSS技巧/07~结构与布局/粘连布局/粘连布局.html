@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>粘连布局</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .wrapper {
+        box-sizing: border-box;
+        min-height: 100vh;
+        padding-bottom: 50px;
+      }
+      .main {
+        overflow: hidden; /* 创建BFC，防止父子margin1传递 */
+      }
+      .footer {
+        height: 50px;
+        margin-top: -50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="main" style="background-color: red; color: #fff;">
+        <p>main</p>
+        <p>main</p>
+        <p>main</p>
+        <p>main</p>
+        <p>main</p>
+        <p>main</p>
+      </div>
+    </div>
+    <div
+      class="footer"
+      style="background-color: blue; color: #fff;text-align: center; line-height: 50px;"
+    >
+      footer
+    </div>
+  </body>
+</html>

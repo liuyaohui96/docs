@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      li:only-child {
+        /* 只有一项的列表 */
+        color: red;
+      }
+
+      /* 有四项的列表 */
+      li:first-child:nth-last-child(4),
+      li:first-child:nth-last-child(4) ~ li {
+        /* 即是第一项，又是倒数第四项，即拥有四个项目的li */
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>单个元素</h1>
+    <ul>
+      <li>苏轼</li>
+    </ul>
+
+    <ul>
+      <li>唐</li>
+      <li>宋</li>
+      <li>元</li>
+      <li>明</li>
+    </ul>
+
+    <ul>
+      <li>测试</li>
+      <li>测试</li>
+      <li>测试</li>
+      <li>测试</li>
+      <li>测试</li>
+    </ul>
+  </body>
+</html>

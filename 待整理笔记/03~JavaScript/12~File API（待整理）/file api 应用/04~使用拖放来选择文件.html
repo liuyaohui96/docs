@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #drop {
+        width: 200px;
+        margin: 20px auto;
+        height: 200px;
+        background-color: orange;
+        cursor: pointer;
+        text-align: center;
+        line-height: 200px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="drop">
+      拖入文件到这里
+    </div>
+    <div id="preview"></div>
+    <script>
+      const dropArea = document.querySelector('#drop');
+      dropArea.addEventListener('dragenter', dragenter);
+      dropArea.addEventListener('dragover', dragover);
+      dropArea.addEventListener('drop', drop);
+      // 禁止事件传播和阻止默认事件
+      function dragenter(e) {
+        e.stopPropagation();
+        e.preventDefault();
+      }
+      function dragover(e) {
+        e.stopPropagation();
+        e.preventDefault();
+      }
+
+      function drop(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        const data = e.dataTransfer;
+        const files = data.files;
+        handleFiles(files);
+      }
+      function handleFiles(files) {
+        for (var i = 0; i < files.length; i++) {
+          var file = files[i];
+          var imageType = /^image\//;
+
+          if (!imageType.test(file.type)) {
+            continue;
+          }
+
+          var img = document.createElement('img');
+          img.classList.add('obj');
+          img.file = file;
+          preview.appendChild(img); // 假设"preview"就是用来显示内容的div
+
+          var reader = new FileReader();
+          reader.onload = (function(aImg) {
+            return function(e) {
+              aImg.src = e.target.result;
+            };
+          })(img);
+          reader.readAsDataURL(file);
+        }
+      }
+    </script>
+  </body>
+</html>

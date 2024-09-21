@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>表格</title>
+  </head>
+  <body>
+    <!-- 
+table
+  thead -> tr -> th 表头
+  tbody -> tr -> td 表主体
+  tfoot 表注
+
+常用属性：
+colspan 跨列
+rowspan 跨行
+ -->
+    <table>
+      <!-- `<caption>`为表格增加标题 -->
+      <!-- 
+   对那些希望可以快速浏览网页中的表格对他们是否有帮助的读者们来说，是非常好的功能。
+   特别是盲人用户，不需要让屏幕阅读设备读出很多单元格的内容，来让用户了解这张表格讲的是什么 
+   -->
+      <caption>
+        Dinosaurs in the Jurassic period
+      </caption>
+      <!-- 添加<thead>  <tfoot> <tbody> 标记为表头、页脚、正文部分 
+   更易于屏幕阅读器用户访问
+   更好地让 CSS 应用到表格上  
+   -->
+      <!-- thead元素一般是表格的第一行，如果使用了 <col>/<colgroup> 元素，那么 <thead>元素就需要放在它们的下面 -->
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Instrument</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>Name</th>
+          <th>Instrument</th>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td>John Lennon</td>
+          <td>Rhythm Guitar</td>
+        </tr>
+        <tr>
+          <td>Paul McCartney</td>
+          <td>Bass</td>
+        </tr>
+        <tr>
+          <td>George Harrison</td>
+          <td>Lead Guitar</td>
+        </tr>
+        <tr>
+          <td>Ringo Starr</td>
+          <td>Drums</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

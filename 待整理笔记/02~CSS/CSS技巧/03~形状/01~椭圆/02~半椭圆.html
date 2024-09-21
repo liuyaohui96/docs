@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      /* 两个半椭圆共有的属性 */
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: #000;
+      }
+      .top {
+        /* 左右两边垂直对称，左上角半径和右上角半径相同*/
+        /* 顶部是非平直部分，所以为左半径和右半径水平部分为50%
+           ，注意，垂直半径为0，水平圆角是多少都会自动计算为0 
+        */
+        border-radius: 50% / 100% 100% 0 0;
+      }
+      .left {
+        /* 上下两边垂直对称，上下半径相同 */
+        /* 左水平半径为100%，垂直半径为50% */
+        border-radius: 100% 0 0 100% / 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 举例两个方向的半椭圆 -->
+    <!-- 上半椭圆 -->
+    <div class="top"></div>
+
+    <!-- 左半椭圆 -->
+    <div class="left"></div>
+  </body>
+</html>

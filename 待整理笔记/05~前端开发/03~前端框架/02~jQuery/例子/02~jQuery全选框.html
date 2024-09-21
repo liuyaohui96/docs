@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th><input type="checkbox" name="" id="" /></th>
+          <th>name</th>
+          <th>age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="checkbox" name="" id="" /></td>
+          <td>zhangsan</td>
+          <td>24</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="" id="" /></td>
+          <td>lisi</td>
+          <td>25</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $('thead input').change(function() {
+      $('tbody input').prop('checked', $(this).prop('checked'));
+    });
+    $('tbody input').change(function() {
+      let allInputEl = $('thead input');
+      if ($('tbody input').length === $('tbody input:checked').length)
+        allInputEl.prop('checked', true);
+      else allInputEl.prop('checked', false);
+    });
+
+    // === 原生的
+    // let allInputEl = document.querySelector('thead input');
+    // let singelInputEls = document.querySelectorAll('tbody input');
+    // allInputEl.onchange = function() {
+    //   [...singelInputEls].forEach(item => (item.checked = this.checked));
+    // };
+    // [...singelInputEls].forEach(item => {
+    //   item.onchange = function() {
+    //     if (
+    //       singelInputEls.length ===
+    //       document.querySelectorAll('tbody input:checked').length
+    //     )
+    //       allInputEl.checked = true;
+    //     else allInputEl.checked = false;
+    //   };
+    // });
+  </script>
+</html>

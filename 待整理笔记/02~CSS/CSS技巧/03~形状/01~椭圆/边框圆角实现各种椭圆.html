@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>边框圆角实现各种椭圆</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+      }
+      .circle {
+        border-radius: 50%;
+      }
+      .top {
+        border-radius: 50% 50% 0 0/ 100% 100% 0 0;
+      }
+      .left {
+        border-radius: 100% 0 0 100%/ 50% 50% 50% 50%;
+      }
+      .fourth {
+        border-radius: 100% 0 0 0 / 100% 0 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>圆</h1>
+    <div class="circle"></div>
+    <h1>上半圆</h1>
+    <div class="top"></div>
+    <h1>左半圆</h1>
+    <div class="left"></div>
+    <h1>四分之圆</h1>
+    <div class="fourth"></div>
+  </body>
+</html>

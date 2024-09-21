@@ -1,0 +1,33 @@
+.chat {
+  background: #f1f1f1;
+  display: flow-root;
+  max-width: 600px;
+  border: 2px solid #dedede;
+  padding: 15px;
+  margin: 10px auto 0;
+  border-radius: 6px;
+}
+
+.chat img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px;
+}
+.chat .time {
+  color: #b9aaaa;
+  float: right;
+}
+
+.chat.friend {
+  background: #ddd;
+  border-color: #ccc;
+}
+.chat.friend img {
+  float: right;
+  margin-right: 0;
+}
+.chat.friend .time {
+  float: left;
+}

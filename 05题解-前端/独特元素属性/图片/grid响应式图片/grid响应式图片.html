@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-auto-rows: 240px;
+      gap: 16px;
+    }
+
+    .grid-container>div {
+      border-radius: 12px;
+      background: url(./images.jpg);
+      background-size: cover;
+    }
+
+    @media screen and (min-width: 600px) {
+      .tall {
+        grid-row: span 2;
+      }
+
+      .wide {
+        grid-column: span 2;
+      }
+    }
+  </style>
+  <title>grid响应式图片</title>
+</head>
+
+<body>
+  <h1>grid响应式图片</h1>
+  <div class="grid-container">
+    <div class="tall wide"></div>
+    <div class="tall"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="wide"></div>
+  </div>
+</body>
+
+</html>

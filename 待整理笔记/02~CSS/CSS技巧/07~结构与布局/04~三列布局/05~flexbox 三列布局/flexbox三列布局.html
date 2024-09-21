@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<head>
+  <title>flex 圣杯布局</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    .container {
+      display: flex;
+    }
+    .left {
+      flex-basis: 100px;
+    }
+    .main {
+      flex-grow: 1;
+    }
+    .right {
+      flex-basis: 150px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" style=" color: #fff;">
+    <div class="left" style="background: red;">left left left  left</div>
+    <div class="main" style="background: green;">
+      main main main main main main  main main main main main main main main main
+      main main main main main main  main main main main main main main main main
+      main main main main main main  main main main main main main main main main
+      main main main main main main  main main main main main main main main main
+    </div>
+    <div class="right" style="background: blue;">right right  right right right right right</div>
+  </div>
+</body>
+
+</html>

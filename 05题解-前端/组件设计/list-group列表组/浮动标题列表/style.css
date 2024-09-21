@@ -1,0 +1,32 @@
+dl {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  width: 400px;
+  height: 400px;
+  overflow-y: auto;
+  margin: 20px auto;
+  border-radius: 10px;
+  background-color: #455A64;
+  color: #fff;
+}
+
+dt {
+  grid-column: 1;
+  align-self: center;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 1px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #000;
+  display: inline-flex;
+}
+
+dd {
+  grid-column: 2;
+  margin: 0;
+  padding: 12px;
+}

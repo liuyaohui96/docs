@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    div {
+      display: flow-root;
+      width: 50%;
+      background: red;
+    }
+
+    div::before {
+      content: '';
+      float: left;
+      /* 设置高度和宽度比例为1:1 */
+      padding-top: 100%;
+    }
+  </style>
+  <title>高度与宽度的比例</title>
+</head>
+
+<body>
+  <h1>高度与宽度的比例</h1>
+  <div>高度与宽度的比例</div>
+</body>
+
+</html>

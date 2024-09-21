@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- div上v-if初始为假值，即取反v-if的值从而更新DOM前，是不能获取到这个元素 -->
+      <div v-if="flag" id="text">文本</div>
+      <button @click="getText">get text</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+      let vm = new Vue({
+        el: '#app',
+        data: {
+          flag: false
+        },
+        methods: {
+          getText() {
+            // 虽然改变了值，但是由于异步更新DOM，Vue开启队列缓存所有更新
+            // 所以不能保证DOM已经更新
+            this.flag = !this.flag;
+            // 以下#text元素还未存在
+            // console.log(document.querySelector('#text').textContent);
+
+            // 在下一次DOM 更新完之后调用callback
+            this.$nextTick(() => {
+              console.log(document.querySelector('#text').textContent);
+            });
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

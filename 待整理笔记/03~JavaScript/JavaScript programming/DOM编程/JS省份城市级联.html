@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-3">
+      <select name="select-province" id="select-province">
+        <option value="-1">省份</option>
+        <option value="0">广东</option>
+        <option value="1">江苏</option>
+      </select>
+      <select name="name" id="select-city">
+        <option value="-1">请先选择省份</option>
+      </select>
+    </div>
+
+    <script>
+      document
+        .getElementById("select-province")
+        .addEventListener("change", e => {
+          let city = [["广州", "深圳"], ["南京", "苏州"]];
+
+          let content = "";
+          if (e.target.value !== "-1") {
+            // 根据省份的value，取出相关数组
+            let cityArr = city[e.target.value]; // e.target.value 可以用element.value代替
+            // 根据cityArr迭代构造option
+            cityArr.forEach((item, index) => {
+              content += `<option value=${index}>${item}</option>`;
+            });
+          } else {
+            // 如果等于-1
+            content = `<option value="-1">请先选择省份</option>`;
+          }
+          document.getElementById("select-city").innerHTML = content;
+        });
+    </script>
+  </body>
+</html>

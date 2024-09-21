@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lazyload</title>
+    <style>
+      .image-item {
+        display: block;
+        margin-bottom: 50px;
+        height: 300px; /* 必须设置图片高度 */
+      }
+    </style>
+  </head>
+
+  <body>
+    <img
+      src=""
+      class="images"
+      lazyload="true"
+      data-original="http://temp.im/400x300/ccc"
+    />
+    <img
+      src=""
+      class="images"
+      lazyload="true"
+      data-original="http://temp.im/200x300/ccc"
+    />
+    <img
+      src=""
+      class="images"
+      lazyload="true"
+      data-original="http://temp.im/100x300/ccc"
+    />
+    <img
+      src=""
+      class="images"
+      lazyload="true"
+      data-original="http://temp.im/500x300/ccc"
+    />
+
+    <script src="index.js"></script>
+  </body>
+</html>

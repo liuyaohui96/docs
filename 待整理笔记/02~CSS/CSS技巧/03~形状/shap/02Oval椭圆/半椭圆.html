@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>半椭圆</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: #0077ff;
+    }
+
+    .first {
+      border-radius: 50% / 100% 100% 0 0;
+    }
+
+    .second {
+      border-radius: 100% 0 0 100% / 50%;
+    }
+
+    .third {
+      border-radius: 50% / 0 0 100% 100%;
+    }
+
+    .four {
+      border-radius: 0 100% 100% 0 / 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="first"></div>
+  <br>
+  <div class="second"></div>
+  <br>
+  <div class="third"></div>
+  <br>
+  <div class="four"></div>
+</body>
+
+</html>

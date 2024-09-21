@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Heart</title>
+    <style>
+
+        body{
+            background-color: white;
+            animation-name: body;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes body{
+            50%{
+                background-color: #ffe6f2;
+            }
+        }
+
+
+        @keyframes beat{
+            0%{
+                transform: scale(1) rotate(-45deg);
+            }
+            50%{
+                transform: scale(.5) rotate(-45deg);
+            }
+        }
+
+
+        .heart{
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: pink;
+            width: 50px;
+            height: 50px;
+            transform: rotate(-45deg);
+            animation-name: beat;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        .heart::after{
+            content: '';
+            position: absolute;
+            top: 0px; /* important */
+            left: 25px; /* important */
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: pink;
+        }
+
+
+        .heart::before{
+            content: '';
+            position: absolute;
+            top: -25px; /* important */
+            left: 0px; /* important */
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: pink;
+        }         
+    </style>
+</head>
+<body>
+    
+    <div class="heart"></div>
+</body>
+</html>

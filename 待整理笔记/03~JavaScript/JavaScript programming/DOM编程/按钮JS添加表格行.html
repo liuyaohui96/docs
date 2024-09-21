@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container mt-3">
+      <button class="btn btn-primary" id="btn">click</button>
+
+      <table class="table mt-3">
+        <thead>
+          <tr>
+            <th scope="col">编号</th>
+            <th scope="col">书名</th>
+            <th scope="col">作者</th>
+            <th scope="col">操作</th>
+          </tr>
+        </thead>
+        <tbody id="body"></tbody>
+      </table>
+    </div>
+  </body>
+  <script>
+    document.getElementById("btn").addEventListener("click", () => {
+      document.getElementById("body").innerHTML = `<tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>
+              <button class="mr-2 btn btn-primary">添加</button
+              ><button class="btn btn-primary">删除</button>
+            </td>
+          </tr>`;
+    });
+  </script>
+</html>

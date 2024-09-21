@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+<body>
+    <h1 class="text-center">image</h1>
+    <div class="row">
+        <div class="col-2 bg-primary">
+        <img class="img-fluid" style="width: 100px" src="https://github.com/favicon.ico" alt="responsive image">
+        </div>
+        <div class="col-10 bg-warning">.img-fluid in left side</div>   
+    </div>
+    <!-- .img-fluid end -->
+    <div class="row mt-3">
+        <div class="col-2 bg-primary">
+            <img class="img-thumbnail" style="width: 100px" src="https://github.com/favicon.ico" alt="responsive image">
+        </div>
+        <div class="col-10 bg-warning">.img-fluid in left side</div>   
+    </div>
+    <!-- .img-thumbnail end -->
+
+    <h3 class="mt-3">align image</h3>
+    <div id="change1">
+        <img src="https://github.com/favicon.ico" alt="imgge" id="img1">
+    </div>
+    
+    <div class="mt-3" >
+        <select name="select1" id="select1">
+            <option value="float-left">.float-left</option>
+            <option value="float-right">.float-right</option>
+            <option value="float-none">.float-none</option>
+        </select>
+
+        <select name="select2" id="select2">
+            <option value="text-left">.text-left by image parent</option>
+            <option value="text-center">.text-center by image parent</option>
+            <option value="text-right">.text-right by image parent</option>
+        </select>
+
+        <button value="d-block mx-auto" id="button1">.d-block & .mx-auto</button>
+    </div>
+
+    
+</body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script>
+        $('#select1').change(
+            function(){
+                $('#img1').removeClass();
+                $('#img1').addClass($(this).val());
+            }
+        )
+
+        $('#select2').change(
+            function(){
+                $('#change1').removeClass();
+                $('#change1').addClass($(this).val());
+            }
+        )
+
+        $('#button1').click(
+            function(){
+                $('#img1').removeClass();
+                $('#img1').addClass($(this).val());
+            }
+        )
+    </script>
+</html>

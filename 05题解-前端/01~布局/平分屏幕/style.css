@@ -1,0 +1,36 @@
+.split {
+  color: #fff;
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  padding-top: 110px;
+  position: fixed;
+  top: 0;
+}
+.left {
+  background: #111;
+  left: 0;
+}
+.right {
+  background: #ff0000;
+  right: 0;
+}
+
+.content {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.content img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+}
+
+.content .name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 27px;
+}

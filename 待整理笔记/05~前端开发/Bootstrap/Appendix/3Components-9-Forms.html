@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="d-block w-25 mx-auto rounded border border-primary px-3 py-2" style="margin-top: 20px">
+        <form action="">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                <small class="input-text text-muted">We will not share your email with anyone</small>
+                <div class="valid-feedback">Good!</div>
+            </div>
+            <!-- email end -->
+
+            <div class="form-group">
+                <label for="password">password </label>
+                <input type="password" class="form-control" id="password" placeholder="Enter Password">
+            </div>
+            <!-- password end -->
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select name="gender" id="gender" class="form-control">
+                    <option value="man">man</option>
+                    <option value="woman">woman</option>
+                </select>
+            </div>
+            <!-- gender end -->
+
+            <div class="form-group">
+                <label for="brief-introduction">Brief introduction</label>
+                <textarea name="brief-introduction" id="brief-introduction" rows="3" class="form-control"></textarea>
+            </div>
+            <!-- brief-introduction end -->
+            
+            <div class="form-group">
+                <label for="personal-portraits">Personal portraits</label>
+                <input type="file" class="form-control-file" id="personal-portraits">
+            </div>
+            <!-- personal-portraits end -->
+
+            <div class="form-group">
+                <label for="website">Website</label>
+                <input type="text" class="form-control-plaintext" value="liuyaohui.com" id="website" readonly>
+            </div>
+            <!-- website end -->
+
+            <div class="form-group">
+                <label for="range">Range</label>
+                <input type="range" id="range" class="form-control-range">
+            </div>
+            <!-- range end -->
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="baseketball">
+                <label for="baseketball" class="form-check-label">baseketball</label>
+            </div>
+             <!-- hobby end -->
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="football">
+                <label for="football" class="form-check-label">Football</label>
+            </div>
+            <!-- hobby end -->
+
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="city" id="guangzhou">
+                <label for="guangzhou" class="form-check-label">Guangzhou</label>
+            </div>
+            <!-- city end -->
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="city" id="beijing">
+                <label for="beijing" class="form-check-label">Beijing</label>
+            </div>
+            <!-- city end -->
+
+            <button type="submit" class="btn btn-primary mt-3">Sign up</button>
+        </form>
+        <!-- form end -->
+    </div>
+    <!-- sign up end -->
+
+    <form action="" class="mx-auto w-25 mt-3">
+        <div class="form-group">
+            <input type="text" class="form-control form-control-lg" placeholder=".form-control-lg">
+        </div>
+
+        <div class="form-group">
+                <input type="text" class="form-control" placeholder=".form-control">
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control form-control-sm" placeholder=".form-control-sm">
+        </div>
+    </form>
+    <!-- form-control-sm and from-control-lg end -->
+
+    <div class="d-block mx-auto w-50 border border-primary rounded px-3 py-2">
+        <h3 class="text-center">grid system</h3>
+        <div class="row">
+            <div class="col"><input type="text" class="form-control" placeholder="first col"></div>
+            <div class="col"><input type="text" class="form-control" placeholder="second col"></div>
+        </div>
+    </div>
+    <!-- grid system end -->
+
+    
+    <div class="d-block mx-auto w-50 border border-primary rounded px-3 py-2 mt-3">
+        <h3 class="text-center">horizon form</h3>
+        <div class="form-group row">
+            <label for="example1" class="col-form-label col-2">Label</label>
+            <div class="col-10">
+                <input type="text" class="form-control" placeholder="first col" id="example1">
+            </div>
+        </div>
+    </div>
+    <!-- horizon  form-->
+    
+    <div class="d-block mx-auto mt-3 w-50 px-3 py-2 border border-primary rounded">
+        <form action="" class="needs-validation" novalidate>
+            <h3 class="text-center">form validation</h3>
+            <div class="form-group row">
+                <label for="username" class="col-2 col-form-label">Username</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" id="username" required>
+                    <div class="valid-feedback">good!</div>
+                    <div class="invalid-feedback">bad!</div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="password2" class="col-2 col-form-label">Password</label>
+                <div class="col-10">
+                    <input type="password" class="form-control" id="password2" required>
+                    <div class="valid-feedback">good!</div>
+                    <div class="invalid-feedback">bad!</div>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Sign in</button>
+        </form>
+    </div>
+    <!-- validation end -->
+
+    <div class="d-block mx-auto mt-3 w-50 px-3 py-2 border border-primary rounded">
+        <h3 class="text-center">custom form</h3>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="custom-example-1">
+            <label for="custom-example-1" class="custom-control-label">custom-example-1</label>
+        </div>
+        <!-- custom checkbox end -->
+        <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="custom-example-2" name="custom-example">
+            <label for="custom-example-2" class="custom-control-label">custom-example-2</label>
+        </div>
+        <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="custom-example-3" name="custom-example">
+            <label for="custom-example-3" class="custom-control-label">custom-example-3</label>
+        </div>
+        <!-- custom radio end -->
+
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="custom-example-4">
+            <label for="custom-example-4" class="custom-control-label">custom-example-4</label>
+        </div>
+
+        <select name="custom-example-5" id="custom-example-5" class="custom-select mt-3">
+            <option value="">option1</option>
+            <option value="">option2</option>
+        </select>
+        <!-- custom select end -->
+
+        <label for="custom-example-6">Example range</label>
+        <input type="range" class="custom-range" id="custom-example-6">
+        <!-- custom range -->
+
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="custom-example-7">
+            <label class="custom-file-label" for="custom-example-7">Choose file</label>
+        </div>
+    </div>
+    <!-- custom form end -->
+
+    <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function() {
+              'use strict';
+              window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                  form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                  }, false);
+                });
+              }, false);
+            })();
+    </script>
+
+</body>
+</html>

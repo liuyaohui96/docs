@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    button {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 1px solid #000;
+      border-radius: 4px;
+      background-color: #000;
+      color: #fff;
+      cursor: pointer;
+      text-align: middle;
+      vertical-align: center;
+      /* button 上下边框定位 */
+      position: relative;
+    }
+
+    button::before,
+    button::after {
+      position: absolute;
+      width: 20px;
+      content: '';
+      border-top: 2px solid #000;
+      transition: all .4s;
+    }
+
+    button::before {
+      right: 0;
+      top: -5px;
+    }
+
+    button::after {
+      left: 0;
+      bottom: -5px;
+    }
+
+    button:hover::before,
+    button:hover::after {
+      width: 100%;
+    }
+  </style>
+  <title>按钮边框动画</title>
+</head>
+
+<body>
+  <h1>按钮边框动画</h1>
+  <button>Submit</button>
+</body>
+
+</html>

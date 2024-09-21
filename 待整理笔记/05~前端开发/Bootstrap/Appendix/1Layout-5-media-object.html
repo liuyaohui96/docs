@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+<body>
+    <h3>simple media object</h3>
+    <div class="media">
+        <img src="https://github.com/favicon.ico" alt="github" class="mr-3">
+        <div class="media-body">
+            <h5>github</h5>
+            github is a git version control tool. github is a git version control tool.
+            github is a git version control tool. github is a git version control tool.
+            github is a git version control tool. github is a git version control tool.
+            github is a git version control tool. github is a git version control tool.
+            github is a git version control tool. github is a git version control tool.
+        </div>
+    </div>
+    <!-- simple media object end -->
+
+    <h3 class="mt-3">nested media object</h3>
+    <div class="media">
+            <img src="https://github.com/favicon.ico" alt="github" class="mr-3">
+            <div class="media-body">
+                <h5>Yaohui liu</h5>
+               Yaohui Liu is a good boy.Yaohui Liu is a good boy.Yaohui Liu is a good boy.
+               Yaohui Liu is a good boy.Yaohui Liu is a good boy.Yaohui Liu is a good boy.
+               Yaohui Liu is a good boy.Yaohui Liu is a good boy.Yaohui Liu is a good boy.
+               Yaohui Liu is a good boy.Yaohui Liu is a good boy.Yaohui Liu is a good boy.
+               <div class="media mt-3">
+                   <img src="https://github.com/favicon.ico" alt="github" class="mr-3">
+                   <div class="media-body mr-3">
+                       <h5>github</h5>
+                       github is a git version control tool. github is a git version control tool.
+                       github is a git version control tool. github is a git version control tool.
+                       github is a git version control tool. github is a git version control tool.
+                       github is a git version control tool. github is a git version control tool.
+                       github is a git version control tool. github is a git version control tool.
+                   </div>
+               </div>
+            </div>
+        </div>
+        <!-- nested medai object end -->
+
+        <h3 class="mt-3">media alignment</h3>
+        <div class="media">
+            <img src="https://github.com/favicon.ico" alt="github" class="mr-3" id="change1">
+            <div class="media-body">
+                <h5>github</h5>
+                github is a git version control tool. github is a git version control tool.
+                github is a git version control tool. github is a git version control tool.
+                github is a git version control tool. github is a git version control tool.
+                github is a git version control tool. github is a git version control tool.
+                github is a git version control tool. github is a git version control tool.
+            </div>
+        </div>
+
+        <select name="select1" id="select1" class="mt-3 mb-3">
+            <option value="align-self-start">.align-self-start</option>
+            <option value="align-self-center">.align-self-centr</option>
+            <option value="align-self-end">.align-self-end</option>
+        </select>
+        <!-- media algnment end -->
+
+        <h3 class="mt-3">media order</h3>
+        <div class="media">
+                <img src="https://github.com/favicon.ico" alt="github" class="mr-3" id="change2">
+                <div class="media-body">
+                    <h5>github</h5>
+                    github is a git version control tool. github is a git version control tool.
+                    github is a git version control tool. github is a git version control tool.
+                    github is a git version control tool. github is a git version control tool.
+                    github is a git version control tool. github is a git version control tool.
+                    github is a git version control tool. github is a git version control tool.
+                </div>
+        </div>
+
+        <select name="select2" id="select2" class="mt-3 mb-3">
+                <option value="order-0">.order-0</option>
+                <option value="order-1">.order-1</option>
+        </select>
+        <!-- media order end -->
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script>
+            $('#select1').change(
+                function(){
+                    $('#change1').removeClass();
+                    $('#change1').addClass('mr-3 '+$(this).val());
+                }
+            )
+
+            $('#select2').change(
+                function(){
+                    $('#change2').removeClass();
+                    $('#change2').addClass('mr-3 '+$(this).val());
+                }
+            )
+        </script>
+</body>
+</html>

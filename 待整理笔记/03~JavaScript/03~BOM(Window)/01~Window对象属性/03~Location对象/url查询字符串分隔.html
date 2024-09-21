@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function test(){
+            if(!location.search.length) return {};
+            let queryStr = location.search.substring(1)
+            let ret = {};
+            queryStr.split('&').forEach(item =>{
+                let attr = decodeURIComponent(item.split('=')[0]);
+                let value = decodeURIComponent(item.split('=')[1]);
+                ret[attr] = value;
+            })
+            return ret;
+        }
+        console.log(test());
+            
+       
+    </script>
+</body>
+</html>

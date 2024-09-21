@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script type="text/babel">
+      class BoilingVerdict extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = { celsius: '', fahrenheit: '' };
+        }
+        handleCelsiusChange = celsius => {
+          celsius = parseFloat(celsius);
+          if (isNaN(celsius)) {
+            this.setState({ celsius: '', fahrenheit: '' });
+            return;
+          }
+
+          let fahrenheit = (celsius * 9) / 5 + 32;
+          this.setState({ fahrenheit, celsius });
+        };
+        handleFahrenheitChange = fahrenheit => {
+          fahrenheit = parseFloat(fahrenheit);
+          if (isNaN(fahrenheit)) {
+            this.setState({ celsius: '', fahrenheit: '' });
+            return;
+          }
+          let celsius = ((fahrenheit - 32) * 5) / 9;
+          this.setState({ fahrenheit, celsius });
+        };
+
+        render() {
+          return (
+            <div>
+              <h1>Enter temperature in Celsius</h1>
+              <TemperatureInput
+                temperature={this.state.celsius}
+                onTemperatureChange={this.handleCelsiusChange}
+              />
+              <h1>Enter temperature in Fahrenheit</h1>
+              <TemperatureInput
+                temperature={this.state.fahrenheit}
+                onTemperatureChange={this.handleFahrenheitChange}
+              />
+              <h1>
+                {this.state.celsius >= 100
+                  ? 'The water would boil.'
+                  : 'The water would not boil.'}
+              </h1>
+            </div>
+          );
+        }
+      }
+
+      class TemperatureInput extends React.Component {
+        constructor(props) {
+          super(props);
+        }
+        handleChange = e => {
+          this.props.onTemperatureChange(e.target.value);
+        };
+        render() {
+          return (
+            <input
+              value={this.props.temperature}
+              onChange={this.handleChange}
+            />
+          );
+        }
+      }
+      ReactDOM.render(<BoilingVerdict />, document.querySelector('#app'));
+    </script>
+  </body>
+</html>

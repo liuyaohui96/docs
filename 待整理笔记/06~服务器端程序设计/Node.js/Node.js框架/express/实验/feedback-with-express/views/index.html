@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/public/css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <a class="btn btn-primary mt-5" href="/post">发表留言</a>
+      <!-- comment list -->
+      <ul class="list-unstyled mt-5 border p-3">
+        {{each comments}}
+        <li class="media mt-2">
+          <img src="http://placehold.it/50" class="mr-3" alt="..." />
+          <div class="media-body">
+            <span class="text-secondary">{{ $value.name }}</span>
+            <p class="lead p-3">{{ $value.message }}</p>
+          </div>
+          <span class="text-muted">{{ $value.dateTime }}</span>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </body>
+</html>

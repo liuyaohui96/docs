@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+<body>
+    <h1 class="text-center">table</h1>
+    <div id="responsive-table">
+        <table class="table" id="basic-table">
+            <caption>basic table</caption>
+            <thead>
+                <tr>
+                    <th>thead</th>
+                    <th>thead</th>
+                    <th>thead</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="target-row">
+                    <td>cell</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                </tr>
+                <tr>
+                    <td>cell</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                </tr>
+                <tr>
+                    <td>cell</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- basic table end -->
+    <button id="table" value="table">.table</button>
+    <button id="small-table" value="table-sm">.table-sm</button>
+    
+    <select name="thead" id="thead">
+        <option value="">none</option>
+        <option value="thead-dark">.thead-dark</option>
+        <option value="thead-white">.thead-white</option>
+    </select>
+
+    <select name="border" id="border">
+        <option value="table-bordered">.table-bordered</option>
+        <option value="table-borderless">.table-borderless</option>
+    </select>
+
+    <button id="striped-table" value="table-striped">.table-striped</button>
+    <button id="hover-table" value="table-hover">.table-hover</button>
+    <button id="dark-table" value="table-dark">.table-dark</button>
+
+    <select name="row-bg" id="row-bg">
+        <option value="">none</option>
+        <option value="table-primary">.table-primary</option>
+        <option value="table-secondary">.table-secondary</option>
+        <option value="table-info">.table-info</option>
+        <option value="table-success">.table-success</option>
+        <option value="table-warning">.table-warning</option>
+        <option value="table-danger">.table-danger</option>
+        <option value="table-dark">.table-dark</option>
+        <option value="table-light">.table-light</option>
+        <option value="table-active">.table-active</option>
+    </select>
+
+    <select name="responsive" id="responsive">
+        <option value="">none</option>
+        <option value="table-responsive-sm">.table-responsive-sm</option>
+        <option value="table-responsive-md">.table-responsive-md</option>
+        <option value="table-responsive-lg">.table-responsive-lg</option>
+        <option value="table-responsive-xl">.table-responsive-xl</option>
+        <option value="table-responsive">table-responsive</option>
+    </select>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script>
+        // return to basic table
+        function work1(e){
+            $('#basic-table').removeClass();
+            $('#basic-table').addClass(e.val());
+        }
+
+        function work2(e){
+            $('#basic-table').removeClass();
+            $('#basic-table').addClass('table '+ e.val());
+        }
+
+        $('#table').click(
+            function(){
+                work1($(this));
+            }
+        )
+    
+        $('#small-table').click(
+           function(){
+               work2($(this));
+           }
+        )
+
+        $('#thead').change(
+            function(){
+                $('thead').removeClass();
+                $('thead').addClass($(this).val());
+            }
+       )
+
+       $('#border').change(
+           function(){
+               work2($(this));
+           }
+       )
+
+       $('#striped-table').click(
+           function(){
+               work2($(this));
+           }
+       )
+
+       $('#hover-table').click(
+           function(){
+               work2($(this));
+           }
+       )
+       
+       $('#dark-table').click(
+           function(){
+               work2($(this));
+           }
+       )
+
+       $('#row-bg').change(
+            function(){
+                $('#target-row').removeClass();
+                $('#target-row').addClass($(this).val());
+            }
+       )
+       
+       $('#responsive').change(
+           function(){
+                $('#responsive-table').removeClass();
+                $('#responsive-table').addClass($(this).val());
+           }
+       )
+
+
+
+
+    </script>
+</body>
+</html>

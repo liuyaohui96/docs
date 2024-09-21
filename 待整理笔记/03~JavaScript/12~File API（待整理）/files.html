@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="file" name="file" id="file" multiple />
+    <script>
+      const file = document.querySelector('input');
+      file.addEventListener('change', function() {
+        for (let i = 0; i < this.files.length; i++) {
+          let file = this.files[i];
+          console.log(
+            `file name:  ${file.name}`,
+            `file type: ${file.type}`,
+            `file size: ${file.size} bytes`
+          );
+        }
+      });
+    </script>
+  </body>
+</html>

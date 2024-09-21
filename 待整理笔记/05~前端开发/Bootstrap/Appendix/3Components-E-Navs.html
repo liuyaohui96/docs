@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+<body>
+    <h3 class="text-center">Navs</h3>
+    <div class="mx-auto w-50 border border-primary rounded py-2 px-3">
+        <h3 class="text-center">basic nav</h3>
+        <nav class="nav">
+            <a href="#" class="nav-link active"> Active Link</a>
+            <a href="#" class="nav-link">Link</a>
+            <a href="#" class="nav-link">Link</a>
+            <a href="#" class="nav-link disabled">Disabled Link</a>
+        </nav>
+        <!-- basic nav end -->
+        
+        <h3 class="text-center mt-3">nav nav-tab</h3>
+        <nav class="nav nav-tabs">
+            <a href="#" class="nav-link active">Active Link</a>
+            <a href="#" class="nav-link">Link</a>
+            <a href="#" class="nav-link">Link</a>
+            <a href="#" class="nav-link disabled">Disabled Link</a>
+        </nav>
+        <!-- nav nav-tabs end -->
+
+        <h3 class="text-center mt-3">nav nav-pills</h3>
+        <nav class="nav nav-pills">
+            <a href="#" class="nav-link active">Active Link</a>
+            <a href="#" class="nav-link">Link</a>
+            <a href="#" class="nav-link">Link</a>
+            <a href="#" class="nav-link disabled">Disabled Link</a>
+        </nav>
+        <!-- nav nav-pill end -->
+
+        <h3 class="text-center mt-3">nav nav-pills nav-fill</h3>
+        <nav class="nav nav-pills nav-fill">
+            <a href="#" class="nav-link nav-item active">Active Link</a>
+            <a href="#" class="nav-link nav-item">Link</a>
+            <a href="#" class="nav-link nav-item">Link</a>
+            <a href="#" class="nav-link nav-item disabled">Disabled Link</a>
+        </nav>
+        <!-- nav nav-pills nav-fill end -->
+
+        <h3 class="text-center mt-3">nav nav-pills nav-fill</h3>
+        <nav class="nav nav-pills nav-justified">
+            <a href="#" class="nav-link nav-item active">Active Link</a>
+            <a href="#" class="nav-link nav-item">Link</a>
+            <a href="#" class="nav-link nav-item">Link</a>
+            <a href="#" class="nav-link nav-item disabled">Disabled Link</a>
+        </nav>
+        <!-- nav nav-pills nav-fill end -->
+
+        <h3 class="text-center mt-3">dropdown in nav</h3>
+        <nav class="nav">
+            <a href="#" class="nav-link active"> Active Link</a>
+            <a href="#" style="margin-bottom: 130px" class="nav-link dropdown-toggle" href="#example1" data-toggle="dropdown">Link</a>
+            <div class="dropdown-menu" id="example1">
+                <a href="#" class="dropdown-item">dropdown link</a>
+                <a href="#" class="dropdown-item">dropdown link</a>
+                <a href="#" class="dropdown-item">dropdown link</a>
+            </div>
+            <a href="#" class="nav-link">Link</a>
+            <a href="#" class="nav-link disabled">Disabled Link</a>
+        </nav>
+        <!-- dropdown in nav end -->
+
+        <h3 class="text-center">tablist</h3>
+        <nav class="nav" role="table">
+            <a href="#home" class="nav-link" data-toggle="tab" role="tab" aria-selected="true">Home</a>
+            <a href="#github" class="nav-link" data-toggle="tab" role="tab" aria-selected="false">Github</a>
+        </nav>
+        <div class="tab-content">
+            <div class="tab-pane fade active" role="tabpanel" id="home">Welcome to my home</div>
+            <div class="tab-pane fade" role="tabpanel" id="github">Welcome to github</div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</body>
+</html>

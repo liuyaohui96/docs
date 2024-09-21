@@ -1,0 +1,1 @@
+DNS（Domain Name System，域名系统）, DNS协议运行在UDP协议之上，使用端口号53

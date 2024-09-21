@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="blog-posts-events-demo">
+      <div :style="{ fontSize: postFontSize + 'em' }">
+        <!-- 监听子组件enlarge-text事件 -->
+        <!-- 当点击自组件按钮时，$emit()触发enlarge-text事件，该事件放大所有博文的文本 -->
+        <!-- 组件可以通过$event获得$emit传递的参数 -->
+        <blog-post
+          v-for="post in posts"
+          v-bind:key="post.id"
+          v-bind:post="post"
+          v-on:enlarge-text="postFontSize += $event"
+        ></blog-post>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+      Vue.component('blog-post', {
+        props: ['post'],
+        template: `
+    <div class="blog-post">
+      <h3>{{ post.title }}</h3>
+      <button v-on:click="$emit('enlarge-text', 0.1)">
+        Enlarge text
+      </button>
+      <div v-html="post.content"></div>
+    </div>
+  `
+      });
+      new Vue({
+        el: '#blog-posts-events-demo',
+        data: {
+          posts: [
+            { id: '01', title: 'hello world' },
+            { id: '02', title: 'liuyaohui' }
+          ],
+          postFontSize: 1
+        }
+      });
+    </script>
+  </body>
+</html>

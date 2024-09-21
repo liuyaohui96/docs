@@ -1,0 +1,35 @@
+.card {
+  overflow: hidden;
+  width: 400px;
+  height: 300px;
+  margin: 20px auto;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.card img {
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  transition: margin-top .4s;
+}
+
+.card h3 {
+  margin: 0;
+  padding: 8px 12px 20px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+p {
+  margin: 0;
+  padding: 8px 12px;
+}
+
+.card:hover img {
+  margin-top: -50px;
+}
+
+.card:hover h3 {
+  padding-bottom: 0;
+}

@@ -1,0 +1,9 @@
+中文声明：
+
+此刘耀惠的 docs 仓库内的所有内容，仅可用于学习、研究及交流等非商业性目的。任何未经授权的商业使用行为均被严格禁止，因其可能侵犯知识产权并引发法律风险。请务必尊重作者刘耀惠的辛勤劳动成果，携手共同营造良好的开源环境。
+
+English Statement:
+
+All the contents in this docs repository of Liu Yaohui can only be used for non-commercial purposes such as learning, research and communication. Any unauthorized commercial use is strictly prohibited as it may infringe intellectual property rights and trigger legal risks. Please be sure to respect the hard work of the author, Liu Yaohui, and jointly create a good open-source environment. 
+
+声明人：刘耀惠

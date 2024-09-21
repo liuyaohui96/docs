@@ -1,0 +1,36 @@
+.solve > h1 {
+  font-size: 34px;
+  text-align: center;
+  color: #426af1;
+}
+.solve > p {
+  font-size: 24px;
+  color: #6c7081;
+  text-align: center;
+}
+.solve_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.solve_content_text {
+  max-width: 400px;
+}
+.solve_content_text > h1 {
+  font-size: 24px;
+  color: #6c7081;
+}
+.solve_content_text > p {
+  color: #6c7081;
+}
+
+.content_desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content_desc > img {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}

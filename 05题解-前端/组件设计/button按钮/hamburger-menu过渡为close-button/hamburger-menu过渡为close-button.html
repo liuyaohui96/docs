@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    div.hamburger-menu {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 4px 0;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+    }
+
+    div.bar {
+      height: 5px;
+      border-radius: 4px;
+      background-color: #000;
+      transition: all .5s;
+      transform-origin: left;
+    }
+
+    .hamburger-menu:hover .bar:first-child {
+      transform: rotate(45deg);
+    }
+
+    .hamburger-menu:hover .bar:last-child {
+      transform: rotate(-45deg);
+    }
+
+    .hamburger-menu:hover .bar:nth-child(2) {
+      opacity: 0;
+    }
+  </style>
+  <title>hamburger-menu过渡为close-button</title>
+</head>
+
+<body>
+  <h1>hamburger-menu过渡为close-button</h1>
+  <div class="hamburger-menu">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+</body>
+
+</html>

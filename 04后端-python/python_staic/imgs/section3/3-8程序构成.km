@@ -1,0 +1,126 @@
+{
+    "root": {
+        "data": {
+            "id": "d3ubtxxwr8w0",
+            "created": 1725130802623,
+            "text": "程序构成"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "d3ubufqj7540",
+                    "created": 1725130841359,
+                    "text": "若干语句"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d3uc4ekrmlc0",
+                            "created": 1725131622475,
+                            "text": "简单语句",
+                            "expandState": "expand",
+                            "resource": [
+                                "一条语句"
+                            ],
+                            "layout_right_offset": {
+                                "x": -5.9999998211861225,
+                                "y": -17.999999463558254
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d3ubumqfo7k0",
+                                    "created": 1725130856591,
+                                    "text": "表达式语句"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d3v6tvi6ldk0",
+                                            "created": 1725218251726,
+                                            "text": "与运算相关的表达式"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d3v6u6dzuhs0",
+                                                    "created": 1725218275417,
+                                                    "text": "运算符"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3v6u3isof40",
+                                                    "created": 1725218269177,
+                                                    "text": "操作数"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "d3v6umxd8wo0",
+                                                            "created": 1725218311417,
+                                                            "text": "标识符"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d3v6up4i0dc0",
+                                                            "created": 1725218316202,
+                                                            "text": "字面量"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3v6wrnv0f40",
+                                                    "created": 1725218478455,
+                                                    "text": "括号（可选）"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d3v6u1bxurk0",
+                                            "created": 1725218264409,
+                                            "text": "其他表达式"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d3uc4pl5gf40",
+                                    "created": 1725131646443,
+                                    "text": "关键字语句"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d3ubuvd33mg0",
+                            "created": 1725130875375,
+                            "text": "复合语句",
+                            "resource": [
+                                "代码块"
+                            ]
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-green-compat",
+    "version": "1.4.43"
+}

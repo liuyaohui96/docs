@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <style>
+      div {
+        position: relative;
+        display: inline-block;
+        color: #fff;
+        padding: 1em 1em 0.35em;
+      }
+      div::after {
+        content: '';
+        position: absolute;
+        background: #58a;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        /* 三维变换，x轴旋转 */
+        transform: perspective(0.5em) rotateX(5deg);
+        transform-origin: bottom;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 使用三维变换旋转，对元素变形后，内部的逆变形是不可以逆转的 -->
+    <!-- 所以使用伪元素方案 -->
+    <div>hello world</div>
+  </body>
+</html>

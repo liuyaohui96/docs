@@ -1,0 +1,12 @@
+
+## 如何通过API操作DOM
+操作DOM可以分为
+1. 修改文档的相关属性，访问文档内部的相关节点，都需要使用Document接口，它表示DOM tree
+2. 文档内部的节点操作，大部分都是在元素节点上进行操作，无论哪一个元素，他们都实现了通用的HTMLElement接口，HTMLElement接口继承了Element接口
+
+所以操作DOM的核心API是Document接口，HTMLElement & Element接口
+
+此外，Document和Element都继承了Node接口，由Node接口提供更一般的属性和方法，Node接口又继承了EventTarget接口，EventTarget接口定义了事件监听器相关方法
+
+此外，Document 还继承了ParentNode接口上的属性和方法；Element 还继承了ParentNode，ChildNode， NonDocumentTypeChildNode上的属性和方法
+

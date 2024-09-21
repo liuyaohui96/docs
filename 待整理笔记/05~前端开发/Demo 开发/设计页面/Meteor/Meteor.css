@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+.navbar {
+  background-color: transparent;
+  color: #fff;
+}
+.navbar.active {
+  background-color: #fff;
+  color: #000;
+}
+
+.nav-item > .nav-link {
+  color: #fff !important;
+  font-size: 12px;
+}
+.navbar.active .nav-item > .nav-link {
+  color: #000 !important;
+}
+/* slide */
+.slides-container {
+  height: 680px;
+  position: relative;
+}
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.slide-show {
+  display: block;
+}
+.slide > img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.slide > .slide-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.slide-selected {
+  transform: translateX(0);
+  transition: transform 0.5s;
+}
+.slide-moving {
+  /* transition: 0.5s; */
+  opacity: 1;
+  transition: opacity 2s;
+}
+.slide-move-left {
+  transform: translateX(-100%);
+  opacity: 0.7;
+  /* transition: transform 3s ease; */
+}
+.slide-from-right,
+.slide-from-left {
+  transition: opacity 0.4s 0.2s, transform 0.5s 0.2s;
+}
+
+.about {
+  padding-top: 70px;
+}
+.about > header,
+.portfolio > header {
+  font-weight: bolder;
+  text-align: center;
+}
+.about > .line,
+.portfolio > .line {
+  margin: 0 auto;
+  width: 60px;
+  height: 3px;
+  background-color: #000;
+  margin-top: 20px;
+}
+.about-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+.about-card {
+  flex-basis: 10rem;
+  flex-grow: 1;
+  text-align: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.125);
+  transition: 0.3s ease;
+}
+.about-card:hover {
+  background-color: rgb(162, 207, 141);
+  color: #fff;
+}
+.about-card:not(:first-child) {
+  margin-left: 20px;
+}
+.about-card > p {
+  margin-bottom: 0;
+}
+
+/* portfolio */
+.portfolio {
+  padding-top: 20px;
+}
+.portfolio > ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.portfolio > ul > li {
+  padding: 20px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.portfolio > ul > li:hover {
+  color: rgb(162, 207, 141);
+}
+.portfolio > ul > li.active {
+  color: rgb(162, 207, 141);
+}
+
+.portfolio .gallery-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.gallery-col {
+  flex-basis: 250px;
+  padding: 0 10px;
+  display: none;
+  transition: 0.3s ease;
+  margin-bottom: 20px;
+}
+.gallery-col.show {
+  display: block;
+}
+.portfolio .gallery-img {
+  position: relative;
+}
+.portfolio .gallery-img.show {
+  display: block;
+}
+.gallery-img > img {
+  display: block;
+  width: 100%;
+}
+.gallery-img > .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  text-align: center;
+  background-color: rgb(162, 207, 141);
+  background-clip: border-box;
+}
+.gallery-img > .overlay > button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.gallery-img:hover > .overlay {
+  display: block;
+}
+.portfolio > .gallery-show {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 70%;
+  transform: translate(-50%, -50%);
+  /* background-color: #000; */
+  z-index: 1000;
+  display: none;
+}
+.portfolio > .gallery-show.show {
+  display: block;
+}
+.portfolio > .gallery-show > .gallery-close {
+  color: #000;
+  cursor: pointer;
+  font-size: 50px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.portfolio > .gallery-show > img {
+  display: block;
+  width: 50%;
+  margin: 20px auto 0;
+}

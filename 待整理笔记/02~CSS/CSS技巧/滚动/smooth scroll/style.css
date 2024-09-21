@@ -1,0 +1,32 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#section1,
+#section2 {
+  background: #f44336;
+  color: #fff;
+  padding: 100px 0 0 72px;
+  height: 530px;
+}
+
+#section1 a,
+#section2 a {
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+  padding: 14px 20px;
+}
+
+#section2 {
+  background: #ffeb3b;
+  color: #000;
+}

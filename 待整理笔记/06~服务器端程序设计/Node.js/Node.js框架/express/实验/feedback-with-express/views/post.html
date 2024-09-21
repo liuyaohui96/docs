@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <a class="btn btn-primary mt-5" href="/">回到首页</a>
+
+      <!-- comment card -->
+      <div class="card mt-5">
+        <div class="card-header">
+          留言板
+        </div>
+        <div class="card-body">
+          <form action="/pinglun" method="POST">
+            <div class="form-group">
+              <label for="name">您的姓名：</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                required
+                minlenght="2"
+                maxlength="10"
+                placeholder="请输入姓名"
+                name="name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">您的留言：</label>
+              <textarea
+                id="message"
+                rows="3"
+                class="form-control"
+                placeholder="请输入留言..."
+                name="message"
+              ></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">提交</button>
+          </form>
+        </div>
+      </div>
+      <!-- comment card end -->
+    </div>
+  </body>
+</html>

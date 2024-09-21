@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      /* 假
+      box1: padding 40px border 1px width 400px
+      box2: padding 10px border 5px = 15px
+      box3: padding 20 border 0 = 20px 
+      box4: padding 103 px border 2px =  105px
+      box5: width 100px border 10px = 60px
+        15px + 20px + 105px + 60px = 200px
+      */
+      #box1 {
+        width: 400px;
+        height: 400px;
+        padding: 40px;
+        border: 1px dashed #000;
+      }
+      #box2 {
+        padding: 10px;
+        border: 5px solid blue;
+      }
+      #box3 {
+        padding: 20px;
+        background: red;
+      }
+      #box4 {
+        padding: 103px;
+        border: 2px double #fff;
+      }
+      #box5 {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        border: 10px solid yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box1">
+      <div id="box2">
+        <div id="box3">
+          <div id="box4">
+            <div id="box5"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

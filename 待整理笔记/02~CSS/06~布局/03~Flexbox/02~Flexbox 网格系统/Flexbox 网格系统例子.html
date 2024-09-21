@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>flexbox 网格系统例子</title>
+    <style>
+      .box {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .box > * {
+        flex: 0 0 33.3333%;
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+      <div>Six</div>
+      <div>Seven</div>
+      <div>Eight</div>
+      <div>Nine</div>
+      <div>Ten</div>
+    </div>
+  </body>
+</html>

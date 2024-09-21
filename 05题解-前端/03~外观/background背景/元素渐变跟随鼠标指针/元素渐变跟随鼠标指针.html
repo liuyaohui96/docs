@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      margin: 10px auto 0;
+      background-color: #7983ff;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .container::before {
+      --size: 0;
+      --x: 0;
+      --y: 0;
+      content: '';
+      position: absolute;
+      left: var(--x);
+      top: var(--y);
+      width: var(--size);
+      height: var(--size);
+      background: radial-gradient(circle closest-side, pink, transparent);
+      transition: width .4s, height .4s;
+      transform: translate(-50%, -50%);
+    }
+
+    .container:hover::before {
+      --size: 200px;
+    }
+  </style>
+  <script src="./index.js" defer></script>
+  <title>元素渐变跟随鼠标指针</title>
+</head>
+
+<body>
+  <h1>元素渐变跟随鼠标指针</h1>
+  <div class="container"></div>
+</body>
+
+</html>

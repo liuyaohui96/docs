@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="file" name="file" id="file" />
+    <script>
+      const fileInput = document.querySelector('input');
+      fileInput.addEventListener('change', function() {
+        let file = this.files[0]; // 假如不添加multiple属性，只加载一个文件
+        let reader = new FileReader();
+        reader.readAsText(file);
+        reader.onload = function(event) {
+          console.log(event.target.result);
+        };
+      });
+    </script>
+  </body>
+</html>

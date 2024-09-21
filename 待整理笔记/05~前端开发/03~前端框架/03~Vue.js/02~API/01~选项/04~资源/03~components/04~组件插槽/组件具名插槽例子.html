@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <base-layout>
+        <template v-slot:header>
+          <h1>Header slot</h1>
+        </template>
+        default slot
+        <template v-slot:footer>
+          <h3>footer slot</h3>
+        </template>
+      </base-layout>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <script>
+      Vue.component('base-layout', {
+        template: `<div class="container">
+  <header>
+    <slot name="header"></slot>
+  </header>
+  <main>
+    <slot></slot>
+  </main>
+  <footer>
+    <slot name="footer"></slot>
+  </footer>
+</div>`
+      });
+      let vm = new Vue({
+        el: '#app'
+      });
+    </script>
+  </body>
+</html>

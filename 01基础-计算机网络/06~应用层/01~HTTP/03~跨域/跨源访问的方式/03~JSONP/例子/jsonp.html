@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 脚本运行时异步创建新的脚本，路径query字符串提供参数
+       * 服务器根据参数，选择根据参数执行方法，服务器返回运行的data，浏览器输出这个data
+       */
+      function jsonp({ url, params, cb }) {
+        return new Promise((resolve, reject) => {
+          let script = document.createElement('script');
+          window[cb] = function(data) {
+            resolve(data);
+            document.body.removeChild(script);
+          };
+          params = { ...params, cb }; // wd=b&cb=show
+
+          let arrs = [];
+          for (let key in params) {
+            arrs.push(`${key}=${params[key]}`);
+          }
+          script.src = `${url}?${arrs.join('&')}`;
+          document.body.appendChild(script);
+        });
+      }
+      jsonp({
+        // 注释下面，我们不向百度发送请求，我们向本地服务器发送请求
+        // url: 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',
+        url: 'http://localhost:5500/say',
+        params: { wd: 'b' },
+        cb: 'show'
+      }).then(data => {
+        console.log(data);
+      });
+    </script>
+    <!-- <script src="https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=a&cb=show"></script> -->
+    <!-- https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=a&cb=show  -->
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .box {
+      position: relative;
+      border: 5px solid #000;
+      padding: 10px;
+    }
+
+    .box::before,
+    .box::after {
+      position: absolute;
+      bottom: 100%;
+      left: 20px;
+      width: 0;
+      height: 0;
+      border: 20px solid transparent;
+      border-bottom-color: #000;
+      content: '';
+    }
+
+    .box::after {
+      left: 25px;
+      border-width: 15px;
+      border-bottom-color: #fff;
+    }
+  </style>
+  <title>边框添加上三角形</title>
+</head>
+
+<body>
+  <h1>边框添加上三角形</h1>
+  <div class="box">边框添加上三角形</div>
+</body>
+
+</html>

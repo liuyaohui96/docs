@@ -1,0 +1,36 @@
+#checkbox {
+  position: absolute;
+  left: -9999px;
+}
+
+.checkbox-label {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  transform: background-color .4s;
+}
+
+.checkbox-label::after {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: transform .4s;
+}
+
+
+input:checked+.checkbox-label {
+  background-color: #7983ff;
+
+}
+
+input:checked+.checkbox-label::after {
+  transform: translate(18px);
+}
